@@ -45,15 +45,12 @@ const backvoice2 = computed(() => backvoice.value)
 const windowHeight = ref(window.innerHeight)
 const changebackvoice = () => {
     if (backvoice2.value) {
-        backvoice.value = false
-        soundManager.pauseAll();
-
+        backvoice.value = false  // 关闭声音
+        soundManager.pauseAll();    // 暂停声音
     } else {
-        backvoice.value = true
-        soundManager.resumeAll();
+        backvoice.value = true  // 打开声音
+        soundManager.resumeAll();    // 恢复声音
     }
-
-    console.log(backvoice.value)
 }
 
 const MyMath = (function MyMathFactory(Math) {
@@ -582,8 +579,11 @@ const startcanvas = () => {
                     );
                 }
             }
-            const soundx = ['burst', 'lift']
-            soundManager.playSound(soundx[getRandomInt(soundx.length)]);
+            // 只有在声音开启时才播放音效
+            if (backvoice2.value) {
+                const soundx = ['burst', 'lift']
+                soundManager.playSound(soundx[getRandomInt(soundx.length)]);
+            }
         }
     }
     init();
@@ -593,14 +593,16 @@ const startcanvas = () => {
 watch(
     isDark,
     (val) => {
-        startcanvas()
+        startcanvas()   // 重新初始化烟花
+        
     }
 )
 onMounted(() => {
     if(theme.value?.website?.showFirework){
-    soundManager.preload()
-    startcanvas()
-}
+        soundManager.preload()  // 预加载声音
+        soundManager.pauseAll() // 确保初始状态是静音
+        startcanvas()   // 初始化烟花
+    }
 })
 
 </script>

@@ -11,7 +11,7 @@
                         <div class="deng-a">
                             <div class="deng-b">
                                 <div class="deng-t">{{ item }}</div>
-                            </div>
+                            </div>  
                         </div>
                         <div class="shui shui-a">
                             <div class="shui-c"></div>
@@ -22,11 +22,11 @@
             </div> -->
             
             <div class="timedown">
-                <p class="title">清明节</p>
+                <!-- <p class="title">清明节</p>
                 <p class="desc">2025年4月4日</p>
                 <div>
                     <Countdown :until="until" />
-                </div>
+                </div> -->
                 <!-- <button class="tolink"><span class="span">前往抽奖</span><svg class="svf" width="15" height="15"
                         viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path

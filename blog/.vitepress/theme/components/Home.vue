@@ -143,4 +143,13 @@ onMounted(() => {
 <style>
 .Toastify__toast {
   overflow: visible !important;
-}</style>
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--default, .Toastify__toast-theme--light {
+  background: transparent !important;
+  box-shadow: none;
+}
+.Toastify__progress-bar-theme--colored.Toastify__progress-bar--default {
+  background: transparent !important;
+}
+</style>
