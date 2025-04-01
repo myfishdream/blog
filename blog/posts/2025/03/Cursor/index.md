@@ -2,7 +2,7 @@
 post: true
 title: Cursor基础使用
 date: 2025-02-16
-cover: ./posts/2025/03/Cursor/assets/1.png
+cover: ./cover/Cursor.png
 categories: 
  - 教程
 tags:
