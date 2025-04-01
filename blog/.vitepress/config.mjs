@@ -1,6 +1,6 @@
 //模板配置文件
 import { defineConfig } from 'vitepress'
-import { genFeed } from './theme/genFeed'
+// import { genFeed } from './theme/genFeed'
 import { head } from './theme/head';
 // import { ThemeConfig } from './theme/types';    
 import mdItCustomAttrs from 'markdown-it-custom-attrs'
@@ -186,5 +186,5 @@ export default defineConfig({
             heading: '共 {{searchResult}} 条结果'
         })]
     },
-    buildEnd: genFeed
+    // buildEnd: genFeed
 })
