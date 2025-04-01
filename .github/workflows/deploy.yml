@@ -32,7 +32,7 @@ jobs:
       - name: 安装依赖项
         run: npm ci
       - name: 使用 VitePress 构建
-        run: npm run blog:build
+        run: npm run docs:build
       - name: 上传构件
         uses: actions/upload-pages-artifact@v3
         with:
