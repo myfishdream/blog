@@ -1,0 +1,15 @@
+node_modules
+.DS_Store
+dist
+cache
+dist-ssr
+*.local
+.idea
+smartmontools.md
+zsh_history.md
+# /*.md
+# /package-lock.json
+origin_theme.css
+.vitepress/cache
+models
+script
