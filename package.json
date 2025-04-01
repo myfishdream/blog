@@ -17,8 +17,7 @@
   },
   "keywords": [
     "vitepress",
-    "theme",
-    "APP比比"
+    "theme"
   ],
   "type": "module",
   "devDependencies": {

@@ -17,7 +17,7 @@ export default defineConfig({
     },
     // 字体单独配置
     title: '鱼梦江湖',
-    base: '/',
+    base: '/blog',
     head,
     description: '技术学习笔记和心得体会，知识点总结。',
     ignoreDeadLinks: true,  
