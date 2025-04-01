@@ -17,7 +17,6 @@ export default defineConfig({
     },
     // 字体单独配置
     title: '鱼梦江湖',
-    // 自定义域名加根路径导致路径错误
     base: '/',
     head,
     description: '技术学习笔记和心得体会，知识点总结。',
