@@ -4,7 +4,7 @@
     <div style="text-align: center;">
       <p class="title">累了就歇，醒了再走 ！</p>
     </div>
-    <!-- <div><img src="https://s21.ax1x.com/2025/03/31/pEsjdgA.png" alt="公众号二维码" /></div> -->
+    <!-- <div><img src="" alt="公众号二维码" /></div> -->
      <div>
       <strong>yumengjh@outlook.com</strong>
     </div>
@@ -22,7 +22,7 @@
 .gzharea {
   border-radius: 12px;
   padding: 16px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   margin-top: 16px;
   text-align: center;
   font-size: 0.7rem;

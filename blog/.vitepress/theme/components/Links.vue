@@ -1,58 +1,190 @@
 <template>
-    <!-- 友情链接页 -->
+    <!-- 最热文档排行榜 -->
     <div class="wrap">
         <div class="links">
-            <span class="link" v-for="(item, key) in data">
-                <a class="a" :href="item.url"><strong class="strong">{{ item.title }}</strong></a>
-            </span>
+            <div class="title">
+                <svg t="1743601871885" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10196" width="256" height="256"><path d="M410.882359 26.903266c-15.700967 50.217495-58.451969 140.455389-174.715923 260.132596-200.57132 206.715177-227.152033 539.72074 81.02211 703.471586 25.300743 13.439686 46.42025 5.162546 62.291879-11.4344 52.478775-54.782722 75.262244-135.164846 68.435737-241.061042-1.919955-29.183319 11.093074-36.777809 36.86314-16.810274 73.086295 56.57468 120.786515 143.740646 120.786515 237.43446 0 31.871256 12.757036 48.724196 42.495008 42.964331 196.518081-38.100444 436.000493-319.864536 177.915849-732.441577-15.444973-20.99151-38.271107-20.99151-37.887116 7.850484 0.426657 35.412507-3.626582 70.739683-12.117051 105.128213-5.845197 23.892776-28.330006 23.55145-33.620549 0-32.169916-143.313989-121.597163-265.12448-268.324405-365.644801-39.593743-27.092701-53.972074-18.772895-63.145194 10.453089z" fill="#F4420A" p-id="10197"></path></svg>
+                <span>热门文章</span>
+            </div>
+            <div class="hot-list">
+                <div v-for="(article, index) in hotArticles" :key="index" class="hot-item" @click="navigateTo(article.url)">
+                    <div class="rank" :class="{'top3': index < 3}">{{ index + 1 }}</div>
+                    <div class="content">
+                        <div class="article-title">{{ article.title }}</div>
+                        <div class="article-meta">
+                            <span class="date">{{ article.date }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
+
 <script lang="js" setup>
-import { ref } from 'vue'
-const data = ref([{
-    title: '公众号',
-    url: 'https://'
-}])
+import { useRouter } from 'vitepress'
+
+const router = useRouter()
+
+// 手动设置热门文章列表
+const hotArticles = [
+    {
+        title: 'WebSocket',
+        url: '/websocket',
+        date: '2025-03-23'
+    },
+    {
+        title: '正则表达式',
+        url: '/regexp',
+        date: '2025-03-11'
+    },
+    {
+        title: 'Cursor基础使用',
+        url: '/cursor-basic',
+        date: '2025-02-02'
+    },
+    {
+        title: 'Demo1',
+        url: '/demo1',
+        date: '2025-04-02'
+    },
+    {
+        title: 'Demo2',
+        url: '/demo2',
+        date: '2025-04-02'
+    },
+    {
+        title: 'Demo3',
+        url: '/demo3',
+        date: '2025-04-02'
+    },
+    {
+        title: 'Demo4',
+        url: '/demo4',
+        date: '2025-04-02'
+    }
+]
+
+// 页面跳转
+const navigateTo = (url) => {
+    router.go(url)
+}
 </script>
 
-<style scoped>
+<style scoped>  
 .wrap {
     width: 100%;
     margin-top: 16px;
-
-    .links {
-        background-color: var(--vp-c-bg-alt);
-        border-radius: 8px;
-        border: .5px solid var(--vp-c-gray-soft);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        position: relative;
-    }
-
 }
 
-.link {
-    margin: 5px;
-    padding: 0 8px;
-    display: inline-block;
-    background-color: rgba(123, 123, 123, .05);
+.links {
+    background-color: var(--vp-c-bg-alt);
+    border-radius: 8px;
+    border: .5px solid var(--vp-c-gray-soft);
+    padding: 12px 16px;
+    width: 100%;
+    position: relative;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
     color: var(--vp-c-text-1);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    opacity: 0.8;
+}
+
+.hot-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hot-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.hot-item:hover .article-title {
+    color: var(--vp-c-brand);
+}
+
+.rank {
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    border-radius: 3px;
     font-size: 12px;
-    border-radius: 2px;
-    line-height: 24px;
+    font-weight: 500;
+    flex-shrink: 0;
+    color: #fff;
+    background-color: var(--vp-c-text-3);
+}
 
-    .a {
-        color: var(--vp-c-text-1);
-        font-weight: 500;
-        text-decoration: none;
+.hot-item:nth-child(1) .rank {
+    background-color: #ff4757;
+}
+
+.hot-item:nth-child(2) .rank {
+    background-color: #ff7f50;
+}
+
+.hot-item:nth-child(3) .rank {
+    background-color: #ffa502;
+}
+
+.content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.article-title {
+    font-size: 13px;
+    color: var(--vp-c-text-1);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: color 0.2s;
+    margin-right: 8px;
+    flex: 1;
+}
+
+.article-meta {
+    font-size: 12px;
+    color: var(--vp-c-text-2);
+    flex-shrink: 0;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
     }
-
-    .a:hover {
-        color: var(--vp-c-brand);
+    
+    .article-meta {
+        width: 100%;
     }
 }
 </style>

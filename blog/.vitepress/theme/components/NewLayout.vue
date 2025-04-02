@@ -36,7 +36,7 @@
         </template>
         <template #nav-bar-title-after>
             <!-- 在标题后添加 -->
-
+           <span class="VPBadge warning strong mini"> v1.0.0</span>
         </template>
         <template #sidebar-nav-before>
             <PageNavi />
@@ -64,7 +64,7 @@
                 <PageASide v-if="(frontmatter.index)" /> <!-- 右侧页面侧边栏组件 -->
             </ClientOnly>
             <PageGZH />
-            <!-- <Links v-if="(frontmatter.index)" /> -->
+            <Links v-if="(frontmatter.index)" />
 
         </template>
         <template #doc-footer-before>
