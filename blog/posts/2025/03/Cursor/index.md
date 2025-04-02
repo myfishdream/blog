@@ -1,7 +1,7 @@
 ---
 post: true
 title: Cursor基础使用
-date: 2025-02-16
+date: 2025-02-2
 cover: ./cover/Cursor.png
 categories: 
  - 教程
@@ -9,7 +9,7 @@ tags:
  - 教程
  - 笔记
  - 开发工具
-description: 如果使用Curosr基础操作
+description: 如何使用Curosr的一些基础操作
 ---
 
 # Cursor基础使用
