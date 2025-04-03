@@ -62,7 +62,7 @@
             <ClientOnly>
 
                 <!-- <ArticleLink v-if="(frontmatter?.post)" :key="md5(page.relativePath)" /> -->
-                <PageASide v-if="(frontmatter.index)" /> <!-- 右侧页面侧边栏组件 -->
+                <PageASide v-if="(frontmatter.index)"/> <!-- 右侧页面侧边栏组件 -->
             </ClientOnly>
             <PageGZH />
             <PopularDocs v-if="(frontmatter.index)" />

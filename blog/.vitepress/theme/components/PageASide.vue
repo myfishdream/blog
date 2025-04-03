@@ -148,9 +148,10 @@ pushPlayList(true, ...(songList.value || []));
 const props = defineProps({
   type: {
     type: String,
-    required: true
+    default: 'left'
   }
 })
+
 const talkword = ref('累了就歇，醒了再走。')
 const movementx = ref(50)
 const movementy = ref(50)

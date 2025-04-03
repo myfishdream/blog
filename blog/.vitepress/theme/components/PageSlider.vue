@@ -62,7 +62,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 const { theme } = useData();
 const modules = [Navigation]
-console.log(theme.value?.banner)
+// console.log(theme.value?.banner)    // 获取轮播图数据
 const list = ref(theme.value?.banner ? theme.value.banner : [])
 
 const lanternText = ref(['清', '明'])

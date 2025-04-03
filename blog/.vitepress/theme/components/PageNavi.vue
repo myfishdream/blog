@@ -1,6 +1,6 @@
 <template>
   <!-- 自定义主菜单。侧栏和首页顶栏菜单 -->
-  <div class="mainnavi top" v-if="type==='top'">
+  <div class="mainnavi top" v-if="props.type==='top'">
     <ul class="ul">
       <li class="li pc">
         <VDropdown :distance="6" :placement="'bottom'">
@@ -79,7 +79,7 @@ const data = computed(() => initCats(themeposts))
 const props = defineProps({
   type: {
     type: String,
-    required: true
+    default: 'left'
   }
 })
 const selected = ref('')

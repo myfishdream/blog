@@ -49,11 +49,13 @@ const dataformat = ref(0)
 const props = defineProps({
   article: {
     type: Object,
-    required: true
+    // required: true
+    default: () => ({})
   },
   type: {
     type: String,
-    required: true
+    // required: true
+    default: 'single'
   }
 });
 const dataSource = computed(() => (props.article))
