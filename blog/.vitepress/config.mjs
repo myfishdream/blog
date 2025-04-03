@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 import { head } from './theme/head';
 import mdItCustomAttrs from 'markdown-it-custom-attrs'
 import { chineseSearchOptimize, pagefindPlugin } from 'vitepress-plugin-pagefind'
-
+//  https://github.com/ATQQ/sugar-blog/blob/master/packages/vitepress-plugin-pagefind/README-zh.md  
 export default defineConfig({
     lang: 'zh-cn',
     markdown: {
@@ -197,6 +197,7 @@ export default defineConfig({
             emptyText: '没有内容',
             heading: '共 {{searchResult}} 条结果'
         })]
+        // 页面中设置 frontmatter pagefind-indexed: false 则不进行索引
     },
     // buildEnd: genFeed
 })

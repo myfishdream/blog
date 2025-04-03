@@ -190,7 +190,6 @@ export function handleCopy(text) {
         toast("您的浏览器不支持Clipboard API", {
             autoClose: 3000,
             "type": "error",
-            "hideProgressBar": true,
         });
         return;
     }
@@ -198,7 +197,6 @@ export function handleCopy(text) {
     toast("复制成功", {
         autoClose: 2000,
         "type": "success",
-        "hideProgressBar": true,
     });
 
 }

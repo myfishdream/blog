@@ -32,6 +32,8 @@ import 'floating-vue/dist/style.css'
 import Vue3Toasity from 'vue3-toastify';  //使用 toast 库。用于弹框提示反馈等。教程见https://vue3-toastify.js-bridge.com/
 import 'vue3-toastify/dist/index.css';
 
+import demo from './components/demo.vue'
+
 import './components/style.css'
 import './components/snow.css'  //一个 css3雪花特效，用于暗黑模式下显示雪花
 
@@ -72,8 +74,10 @@ export default {
     app.component('Tools', Tools) //工具组件
     app.component('PopularDocs', PopularDocs) //链接组件
     app.component('Welcome', Welcome) //欢迎组件
+    app.component('demo', demo) //demo组件
     app.use(pinia) //使用状态管理库
     app.use(FloatingVue, {
+      // https://floating-vue.starpad.dev/guide/config 具体配置见官网
       themes: {
         'tooltip': {
           distance: 8, //tooltip距离
@@ -82,8 +86,12 @@ export default {
       },
     })
     app.use(Vue3Toasity, {
-      "theme": "colored", //toast主题
+      // https://vue3-toastify.js-bridge.com/ 具体配置见官网
+      "theme": "colored", //toast主题 
       "closeOnClick": false, //点击关闭
+      "transition": "slide",  //动画效果
+      "position": "top-center",  //位置
+      "hideProgressBar": false,  //不隐藏进度条
     }); //toast容器选项
   }
 }
