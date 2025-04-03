@@ -24,7 +24,7 @@ import PageSlider from './components/PageSlider.vue'
 import ArticleCarousel from './components/ArticleCarousel.vue'
 import Player from './components/Player.vue'
 import Tools from './components/Tools.vue'
-import Links from './components/Links.vue'
+import PopularDocs from './components/PopularDocs.vue'
 import Welcome from './components/Welcome.vue'
 import { createPinia } from 'pinia'   // //使用状态管理库。用于音乐播放器的状态监听
 import FloatingVue from 'floating-vue'  // //使用 tooltip库。用于hover提示、悬浮框等。教程见https://floating-vue.starpad.dev/
@@ -70,7 +70,7 @@ export default {
     app.component('ArticlePage', ArticlePage) //文章页面组件
     app.component('Player', Player) //音乐播放器组件
     app.component('Tools', Tools) //工具组件
-    app.component('Links', Links) //链接组件
+    app.component('PopularDocs', PopularDocs) //链接组件
     app.component('Welcome', Welcome) //欢迎组件
     app.use(pinia) //使用状态管理库
     app.use(FloatingVue, {

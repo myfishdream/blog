@@ -5,7 +5,7 @@
     <div class="postlist"
       :class="{ grid: listview === 'grid', list: listview === 'list', hasaside: frontmatter.aside, hassidebar: frontmatter.sidebar||theme?.sidebar?.length }">
       <div class="list" v-for="(article, index) in posts.slice(0, 6)" :key="index">
-        <ArticleList :article="article" />
+        <ArticleList :article="processArticle(article)" />
       </div>
     </div>
   </div>
@@ -16,6 +16,7 @@ import { useData, withBase } from 'vitepress'
 import { useStorage } from '@vueuse/core'   
 import { relatebyTags } from '../functions'
 import { data as themeposts } from '../posts.data'
+
 const { theme, page, frontmatter } = useData()
 const listview = useStorage('listview', 'grid')   
 const article = {
@@ -24,6 +25,25 @@ const article = {
 }
 const posts = computed(() => relatebyTags(themeposts, article))
 
+// 处理文章数据，确保封面图片路径正确
+const processArticle = (article) => {
+  if (!article) return article
+  
+  const processed = { ...article }
+  if (processed.frontmatter?.cover) {
+    // 如果是相对路径（不以http或https开头）
+    if (!/^https?:\/\//.test(processed.frontmatter.cover)) {
+      // 如果以 ./ 开头，去掉 ./
+      const coverPath = processed.frontmatter.cover.replace(/^\.\//, '')
+      // 直接使用 withBase，因为路径中已经包含了 cover/
+      processed.frontmatter = {
+        ...processed.frontmatter,
+        cover: withBase(`/${coverPath}`)
+      }
+    }
+  }
+  return processed
+}
 </script>
 
 <style scoped>

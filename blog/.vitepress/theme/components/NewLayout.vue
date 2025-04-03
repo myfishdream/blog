@@ -36,7 +36,8 @@
         </template>
         <template #nav-bar-title-after>
             <!-- 在标题后添加 -->
-           <span class="VPBadge warning strong mini"> v1.0.0</span>
+             <!-- 读取config.mjs -->
+           <span class="VPBadge warning strong mini">{{theme.version }}</span>
         </template>
         <template #sidebar-nav-before>
             <PageNavi />
@@ -64,7 +65,7 @@
                 <PageASide v-if="(frontmatter.index)" /> <!-- 右侧页面侧边栏组件 -->
             </ClientOnly>
             <PageGZH />
-            <Links v-if="(frontmatter.index)" />
+            <PopularDocs v-if="(frontmatter.index)" />
 
         </template>
         <template #doc-footer-before>
@@ -90,6 +91,8 @@ import Player from './Player.vue';
 
 const { isPause } = toRefs(usePlayerStore());
 const { page, theme, frontmatter, isDark } = useData();
+
+
 const { Layout } = DefaultTheme
 
 // 平滑切换主题

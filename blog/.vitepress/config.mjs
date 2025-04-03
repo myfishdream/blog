@@ -22,6 +22,7 @@ export default defineConfig({
     description: '技术学习笔记和心得体会，知识点总结。',
     ignoreDeadLinks: true,  
     themeConfig: {
+        version: 'v1.0.1',
         beecodeurl: 'https://blog.yumeng.icu/', //这里是内页ArticleLink组件用到的跳转第三方网址，一般用不到，仅仅用于二次开发
         sidebar: [{}], //这里如果删掉，左侧栏的内容全部不显示。页面布局会变成通栏
         nav: [

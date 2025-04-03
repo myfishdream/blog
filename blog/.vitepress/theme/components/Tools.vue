@@ -10,11 +10,13 @@
 				<li class="li" v-for="(cell, key) in item.items">
 					<div class="h3">
 						<div class="icon">
-							<img alt="" class="img" :src="cell?.icon" />
+							<img alt="" class="img" :src="cell?.icon || getFavicon(cell?.link)" @error="handleImageError($event, cell)" />
 						</div>
-						<a class="a" target="_blank" :href="cell?.link"><span class="title">{{ cell.title }}</span><span
-								class="bg">
-							</span></a>
+						<a class="a" target="_blank" :href="cell?.link">
+							<span class="title">{{ cell.title }}</span>
+							<span v-if="cell.badge" :class="['badge', cell.badgeType || 'default']">{{ cell.badge }}</span>
+							<span class="bg"></span>
+						</a>
 					</div>
 
 					<p class="desc" v-if="cell.desc">{{ cell.desc }}</p>
@@ -32,11 +34,37 @@
 </template>
 <script lang="js" setup>
 import { computed, ref } from 'vue'
-import { useData, withBase } from 'vitepress'
+import { useData } from 'vitepress'
 // import type { Tools } from '../types'
 import { toolsdata } from '../toolsdata'
+
 const { theme, frontmatter } = useData();
 const data = computed(() => toolsdata)
+
+// 获取网站图标
+const getFavicon = (url) => {
+	try {
+		const domain = new URL(url).hostname
+		return `https://favicon.yandex.net/favicon/${domain}?size=32`
+	} catch (e) {
+		return 'https://s21.ax1x.com/2025/01/31/pEZi6J0.png'
+	}
+}
+
+// 图片加载失败处理
+const handleImageError = (event, cell) => {
+	const img = event.target
+	const domain = new URL(cell.link).hostname
+
+	// 尝试其他源
+	if (!img.src.includes('icon.horse')) {
+		img.src = `https://icon.horse/icon/${domain}`
+	} else if (!img.src.includes('google.com')) {
+		img.src = `https://www.google.com/s2/favicons?domain=${domain}&sz=128`
+	} else {
+		img.src = 'https://s21.ax1x.com/2025/01/31/pEZi6J0.png'
+	}
+}
 </script>
 
 <style scoped>
@@ -110,6 +138,38 @@ const data = computed(() => toolsdata)
 
 				.a {
 					color: var(--vp-c-text-1);
+					display: flex;
+					align-items: center;
+					gap: 8px;
+
+					.badge {
+						font-size: 12px;
+						padding: 2px 6px;
+						border-radius: 4px;
+						font-weight: 500;
+						line-height: 14px;
+						white-space: nowrap;
+					}
+
+					.badge.hot {
+						background-color: rgba(234, 67, 53, 0.1);
+						color: #ea4335;
+					}
+
+					.badge.new {
+						background-color: rgba(28, 135, 25, 0.1);
+						color: #1c8719;
+					}
+
+					.badge.beta {
+						background-color: rgba(234, 179, 8, 0.1);
+						color: #eab308;
+					}
+
+					.badge.default {
+						background-color: var(--vp-c-bg-alt);
+						color: var(--vp-c-text-2);
+					}
 
 					.bg {
 						z-index: 20;
