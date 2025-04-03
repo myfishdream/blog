@@ -13,3 +13,18 @@ aside: false
 
 使用`canvas`根据分类和标题自动生成封面，背景使用暖色，随机颜色的几何形状作为背景
 
+
+
+---
+
+  <ArticleLink :work="{
+    title: '基于开源Vitepress主题改造',
+    // view: 'https://baidu.com/',
+    // viewtit: '在线下载',
+    // qrcode: 'https://api.qrcode-monkey.com/qr/custom?data=https://baidu.com/&size=600',
+    // yuucode: 'CODE123',
+    // linkpan: 'https://baidu.com',
+    via:'https://github.com/shiheme/appbeebee',
+    github: 'shiheme/appbeebee',
+    // wxwords: 'DOWNLOAD'
+  }" />

@@ -14,11 +14,8 @@
             <ul class="ul">
                 <li class="li"><label class="label">博主</label><span>鱼梦江湖</span></li>
                 <li class="li"><label class="label">程序</label><span>Vitepress</span></li>
-                <li class="li"><label class="label">图标</label><span>remixicon</span></li>
-                <li class="li"><label class="label">音乐</label><span>来源网络</span></li>
-                <li class="li"><label class="label">图片</label><span>根据作品体验生成</span></li>
-                <li class="li"><label class="label">主题</label><span>随缘</span></li>
-                <li class="li"><label class="label">内容</label><span>个人学习笔记，生活记录，教程分享等</span></li>
+                <li class="li"><label class="label">音乐</label><span>来源网络</span></li>  
+                <li class="li"><label class="label">图片</label><span>来源网络</span></li>
             </ul>
         </div>
     </div>

@@ -55,7 +55,7 @@ const props = defineProps({
   type: {
     type: String,
     // required: true
-    default: 'single'
+    // default: 'single'
   }
 });
 const dataSource = computed(() => (props.article))

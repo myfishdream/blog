@@ -25,8 +25,8 @@
         <img class="img qrcodeimg" :src="work?.qrcode" alt="" />
       </template>
     </VDropdown>
-    <div class="tobeebee" v-if="work?.beecode || work?.linkpan"><a class="a vp-external-link-icon"
-        :href="work?.beecode ? theme.beecodeurl + work?.beecode + '.htm' : work?.linkpan" target="_blank"><span>备用下载</span></a>
+    <div class="tobeebee" v-if="work?.yuucode || work?.linkpan"><a class="a vp-external-link-icon"
+        :href="work?.yuucode ? theme.yuucodeurl + work?.yuucode + '.htm' : work?.linkpan" target="_blank"><span>备用下载</span></a>
     </div>
     <div class="entry" v-if="work?.via">
       <div class="githublink">

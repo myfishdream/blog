@@ -23,11 +23,11 @@ export default defineConfig({
     ignoreDeadLinks: true,  
     themeConfig: {
         version: 'v1.0.1',
-        beecodeurl: 'https://blog.yumeng.icu/', //这里是内页ArticleLink组件用到的跳转第三方网址，一般用不到，仅仅用于二次开发
+        yuucodeurl: 'https://blog.yumeng.icu/', //这里是内页ArticleLink组件用到的跳转第三方网址(备用下载地址)
         sidebar: [{}], //这里如果删掉，左侧栏的内容全部不显示。页面布局会变成通栏
         nav: [
-            { text: 'Work1', link: 'https://blog.yumeng.icu' },
-            { text: 'Work2', link: 'https://beebee.work/' }
+            { text: '在线Markdown编辑器', link: 'https://editor.zhuiyue.vip:444/' },
+            // { text: 'Work2', link: 'https://beebee.work/' }
         ],
         music: [ //音乐列表，音乐播放器参数在.vitepress/store/player.ts。封面和歌词不支持可自行按照文章教程修改
             {

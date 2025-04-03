@@ -4,8 +4,9 @@
     <div class="notfoundarea" v-if="type === 'page404'">
       <p class="code">404</p>
       <p>糟糕！页面不见了～</p>
+      <a href="/"><img src="../../../public/other/404.png" alt="ddd"></a>
     </div>
-    <div class="acontent" :style="{
+    <div v-else class="acontent" :style="{
       'padding-bottom': type !== 'articlelist' ? '220px' : '122px'
     }">
       <div class="authorarea" :class="{ happy: !isPause }">
@@ -241,7 +242,11 @@ onUnmounted(() => {
   line-height: 1.5;
 
   .code {
-    font-size: 2rem;
+    font-size: 5rem;
+    font-weight: 400;
+  }
+  p {
+    font-size: 1rem;
   }
 
   margin-bottom: 50px;
