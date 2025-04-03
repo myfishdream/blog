@@ -2,7 +2,7 @@
 post: true
 title: WebSocket
 date: 2025-03-23
-cover: ./cover/websocket.png
+cover: ./cover/websocket.png  
 categories: 
  - 笔记
 tags:

@@ -1,8 +1,8 @@
 ---
 post: true
-title: 正则表达式
+title: 正则表达式的使用，包括量词，贪婪与惰性
 date: 2025-03-11
-cover: ./cover/default.png
+coverTitle: 正则表达式
 categories: 
  - 笔记
 tags:
