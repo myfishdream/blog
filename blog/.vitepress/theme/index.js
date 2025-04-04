@@ -31,7 +31,7 @@ import FloatingVue from 'floating-vue'  // //使用 tooltip库。用于hover提�
 import 'floating-vue/dist/style.css'
 import Vue3Toasity from 'vue3-toastify';  //使用 toast 库。用于弹框提示反馈等。教程见https://vue3-toastify.js-bridge.com/
 import 'vue3-toastify/dist/index.css';
-
+import Countdown from './components/Countdown.vue'
 import demo from './components/demo.vue'
 
 import './components/style.css'
@@ -41,11 +41,11 @@ const pinia = createPinia()
 
 
 import { h } from 'vue'
-// import DefaultTheme from 'vitepress/theme'
 import './style.css'
+import './Customize.css'
 
 export default {
-  // ...DefaultTheme,
+  ...DefaultTheme,
   Layout: NewLayout,  //使用自定义布局组件
   enhanceApp({ app, router, siteData }) {
     // 注册全局组件
@@ -75,6 +75,7 @@ export default {
     app.component('PopularDocs', PopularDocs) //链接组件
     app.component('Welcome', Welcome) //欢迎组件
     app.component('demo', demo) //demo组件
+    app.component('Countdown', Countdown) //倒计时组件
     app.use(pinia) //使用状态管理库
     app.use(FloatingVue, {
       // https://floating-vue.starpad.dev/guide/config 具体配置见官网

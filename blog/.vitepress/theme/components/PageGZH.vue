@@ -1,8 +1,10 @@
 <template>
   <!-- 公众号 -->
   <div class="gzharea">
+  <Countdown until="2026/02/16 00:00"/>
+
     <div style="text-align: center;">
-      <p class="title">累了就歇，醒了再走 ！</p>
+      <p class="title">✨累了就歇，醒了再走 ！</p>
     </div>
     <!-- <div><img src="" alt="公众号二维码" /></div> -->
      <div>
@@ -12,6 +14,7 @@
       <p>
         我的邮箱</p>
     </div>
+
   </div>
 </template>
 

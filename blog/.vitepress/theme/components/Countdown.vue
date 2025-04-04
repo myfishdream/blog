@@ -1,6 +1,6 @@
 <template>
     <!-- 倒计时 -->
-    <div ref="clock" :style="{ marginTop: '16px' }">
+    <div ref="clock">
         <p class="time">
             {{ remainingFormatted }}
         </p>
@@ -58,9 +58,9 @@ p {
 }
 
 .time {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    font-family: "Share Tech Mono", monospace;
+    /* font-family: "Share Tech Mono", monospace; */
     text-align: center;
     background: var(--vp-c-bg-alt);
     overflow: hidden;

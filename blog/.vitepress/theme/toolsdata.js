@@ -18,7 +18,7 @@ export const toolsdata = [
     items: [
       {
         title: 'Quick Reference',
-        desc: '为开发人员分享快速参考备忘清单(速查表)',
+        desc: '为开发人员分享快速参考备忘清单',
         link: 'https://wangchujiang.com/reference/',
         linktxt: 'wangchujiang.com/reference',
       },
@@ -36,7 +36,7 @@ export const toolsdata = [
       {
         icon: 'https://uiverse.io/static/images/uiverse-logo.svg',
         title: 'uiverse',
-        desc: '一个免费的UI设计工具，提供多种UI设计模板，可以帮助设计师快速创建出美观的UI设计',
+        desc: '提供多种UI设计模板',
         link: 'https://uiverse.io/',
         linktxt: 'uiverse.io',
         badge: badge.hot,
@@ -92,7 +92,7 @@ export const toolsdata = [
       },
       {
         title: '在线图标制作',
-        desc: '一个直观的应用程序图标生成器，可让您自定义颜色、边框、阴影等',
+        desc: '应用程序图标生成器',
         link: 'https://zhangyu1818.github.io/appicon-forge/',
         linktxt: 'appicon-forge',
       },
@@ -104,7 +104,7 @@ export const toolsdata = [
       },
       {
         title: 'Reactbits',
-        desc: '为创意开发人员精心挑选的动画组件集合',
+        desc: '为创意开发人员挑选的动画组件集合',
         link: 'https://www.reactbits.dev/',
         linktxt: 'reactbits.dev',
       },

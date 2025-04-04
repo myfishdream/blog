@@ -96,4 +96,8 @@
       <div class="line-4"></div>
     </div>
   </div>
+
 </template>
+
+<script setup>
+</script>
