@@ -9,8 +9,15 @@
               <img class="img bgimg" :src="article.frontmatter.cover" />
             </template>
             <template v-else>
-              <!-- 默认内容 -->
-              <img class="img bgimg" src="/cover/default.png" />
+              <!-- <AutoCover 
+                class="img bgimg"
+                :title="article.frontmatter.coverTitle || article.frontmatter.title"
+                :categories="article.frontmatter.categories || []"
+                :width="800"
+                :height="400"
+              /> -->
+              <img class="img bgimg" src="../../../public/cover/default.png" />
+               
             </template>
           </a>
         </div>
@@ -38,6 +45,7 @@
 import { computed, toRefs } from 'vue'
 import { useData, withBase } from 'vitepress'
 import { useStorage } from '@vueuse/core'
+import AutoCover from './AutoCover.vue'
 // import type { Post } from '../types'
 // 定义文章属性
 const props = defineProps({
