@@ -6,7 +6,7 @@ cover: ./cover/websocket.png
 categories: 
  - 笔记
 tags:
- - Node.js
+ - Nodejs
 description: 使用WebSocket技术开发如在线多人聊天，多人游戏等
 ---
 # WebSocket

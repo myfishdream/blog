@@ -6,8 +6,6 @@ cover: ./cover/Cursor.png
 categories: 
  - 教程
 tags:
- - 教程
- - 笔记
  - 开发工具
 description: 如何使用Curosr的一些基础操作
 ---

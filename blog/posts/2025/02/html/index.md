@@ -7,6 +7,7 @@ categories:
  - 笔记
 tags:
  - HTML
+ - CSS
 description: 行内元素可文本对齐，浮动定位解决布局，BFC防塌陷，Flex弹性伸缩，媒体查询适配多端。
 outline: [2,3]
 ---
