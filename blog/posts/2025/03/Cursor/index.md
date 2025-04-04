@@ -1,8 +1,8 @@
 ---
 post: true
-title: Cursor基础使用
+title: Cursor基础使用，规则，Composer，Context，Setting，Chat
 date: 2025-02-2
-cover: ./cover/Cursor.png
+cover: 
 categories: 
  - 教程
 tags:
