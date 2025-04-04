@@ -120,8 +120,8 @@ const handleImageError = (event, cell) => {
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					width: 28px;
-					height: 28px;
+					width: 35px;
+					height: 35px;
 					border-radius: 28px;
 					overflow: hidden;
 					background-color: var(--vp-c-bg);
@@ -129,9 +129,9 @@ const handleImageError = (event, cell) => {
 					margin-right: 8px;
 
 					.img {
-						width: 22px;
-						height: 22px;
-						border-radius: 22px;
+						width: 33px;
+						height: 33px;
+						border-radius: 28px;
 					}
 
 				}

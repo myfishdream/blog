@@ -13,6 +13,9 @@ export default defineConfig({
             md.use(mdItCustomAttrs, 'image', {
                 'data-fancybox': "gallery"
             })
+        },
+        image: {
+            lazyLoading: true
         }
     },
     // 字体单独配置
@@ -20,7 +23,7 @@ export default defineConfig({
     base: '/',
     head,
     description: '技术学习笔记和心得体会，知识点总结。',
-    ignoreDeadLinks: true,  
+    ignoreDeadLinks: true,
     themeConfig: {
         version: 'v1.0.1',
         yuucodeurl: 'https://blog.yumeng.icu/', //这里是内页ArticleLink组件用到的跳转第三方网址(备用下载地址)
