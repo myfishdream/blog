@@ -1,8 +1,9 @@
 ---
 post: true
-title: WebSocket
+title: WebSocket技术开发如在线多人聊天，多人游戏等
 date: 2025-03-23
-cover: ./cover/websocket.png  
+# cover: ./cover/websocket.png
+coverTitle: WebSocket  
 categories: 
  - 笔记
 tags:
