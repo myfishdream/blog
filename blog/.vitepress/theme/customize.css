@@ -140,3 +140,15 @@
   :root{
     --vp-layout-max-width: 1480px;
   }
+
+  /* 自定义颜色 */
+  :root{
+    /* 卡片小人的肤色 */
+    --vp-c-card-bg: #f4cbb0;
+    /* 小人边框颜色 */
+    --vp-c-card-border: var(--vp-c-bg);
+    /* 耳机把柄颜色 */
+    --vp-c-earphone: #ad0e14;
+    /* 耳机耳机颜色 */
+    --vp-c-earphone-ear: #e90015;
+  }

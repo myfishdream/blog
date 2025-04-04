@@ -354,8 +354,8 @@ onUnmounted(() => {
       width: 100%;
       height: 0;
       padding-top: 100%;
-      background-color: #f4cbb0;
-      border: 2px solid #dcdcdc;
+      background-color: var(--vp-c-card-bg);
+      border: 2px solid var(--vp-c-card-border);
       border-radius: 50%;
       box-sizing: content-box;
       position: relative;
@@ -390,7 +390,7 @@ onUnmounted(() => {
 
       .light::after {
         content: '';
-        background-color: #f4cbb0;
+        background-color: var(--vp-c-card-bg);
         border-radius: 50%;
         box-sizing: content-box;
         position: absolute;
@@ -409,7 +409,7 @@ onUnmounted(() => {
         z-index: 10;
         width: 180px;
         height: 100px;
-        border: 8px solid #f42f25;
+        border: 8px solid var(--vp-c-earphone);
         border-bottom: 0px;
         border-top-left-radius: 110px;
         border-top-right-radius: 110px;
@@ -425,7 +425,7 @@ onUnmounted(() => {
         left: -20px;
         width: 23px;
         height: 40px;
-        background-color: #fd160a;
+        background-color: var(--vp-c-earphone-ear);
         border-radius: 10px;
         transform: rotate(8deg);
       }
@@ -497,7 +497,7 @@ onUnmounted(() => {
 
 .light::after {
   content: '';
-  background-color: #f4cbb0;
+  background-color: var(--vp-c-card-bg);
   border-radius: 50%;
   box-sizing: content-box;
   position: absolute;
@@ -528,7 +528,7 @@ onUnmounted(() => {
   left: 20%;
   top: 25%;
   pointer-events: none;
-  background: #f4cbb0;
+  background: var(--vp-c-card-bg);
   animation-name: blink;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
@@ -651,4 +651,50 @@ onUnmounted(() => {
 .authorarea:hover .eyes:nth-of-type(2n+1)>.pupil,
 .authorarea.happy .eyes:nth-of-type(2n+1)>.pupil {
   transform: rotate(-45deg) !important;
-}</style>
+}
+
+/* 眼球变爱心效果 */
+.authorarea:hover .eyes .pupil,
+.authorarea.happy .eyes .pupil {
+  /* 让眼球停在中心位置 */
+  left: 50% !important;
+  top: 50% !important;
+  background-color: rgb(255, 0, 0);
+  border-radius: 0px;
+  /* 重设变换原点，确保爱心居中 */
+  transform-origin: center center;
+  transform: rotate(-45deg) !important;
+  /* 平滑过渡效果 */
+  transition: all 0.3s ease;
+}
+
+/* 爱心左上半圆 */
+.authorarea:hover .eyes .pupil:before,
+.authorarea.happy .eyes .pupil:before {
+  content: "";
+  position: absolute;
+  top: -12.5px;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgb(255, 38, 0);
+  /* 平滑显示效果 */
+  transition: all 0.3s ease;
+}
+
+/* 爱心右侧半圆 */
+.authorarea:hover .eyes .pupil:after,
+.authorarea.happy .eyes .pupil:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 12.5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgb(255, 0, 0);
+  /* 平滑显示效果 */
+  transition: all 0.3s ease;
+}
+</style>
