@@ -152,3 +152,10 @@
     /* 耳机耳机颜色 */
     --vp-c-earphone-ear: #e90015;
   }
+
+  :root{
+    --vp-c-indigo-1: #10b981;
+  }
+  .result.selected{
+    border-color: #fbb105 !important;
+  }

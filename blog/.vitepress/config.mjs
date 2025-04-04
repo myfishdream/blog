@@ -140,46 +140,31 @@ export default defineConfig({
                 title: ''
             }
         ],
-        // search: {
-        //     provider: 'local',
-        //     options: {
-        //         miniSearch: {
-        //             /**
-        //              * @type {Pick<import('minisearch').Options, 'extractField' | 'tokenize' | 'processTerm'>}
-        //              */
-        //             options: {
-        //             },
-        //             /**
-        //              * @type {import('minisearch').SearchOptions}
-        //              * @default
-        //              * { fuzzy: 0.2, prefix: true, boost: { title: 4, text: 2, titles: 1 } }
-        //              */
-        //             searchOptions: {
-        //               /* ... */
-        //             }
-        //           },
-
-        //         locales: {
-        //             root: {
-        //                 translations: {
-        //                     button: {
-        //                         buttonText: '搜索文档',
-        //                         buttonAriaLabel: '搜索文档'
-        //                     },
-        //                     modal: {
-        //                         noResultsText: '无法找到相关结果',
-        //                         resetButtonTitle: '清除查询条件',
-        //                         footer: {
-        //                             selectText: '选择',
-        //                             navigateText: '切换',
-        //                             closeText: '关闭'
-        //                         }
-        //                     }
-        //                 }
-        //             }
-        //         }
-        //     }
-        // },
+        // search: false 从搜索中排除页面   
+        search: {
+            provider: 'local',
+            options: {
+                locales: {
+                    root: {
+                        translations: {
+                            button: {
+                                buttonText: '搜索文档',
+                                buttonAriaLabel: '搜索文档'
+                            },
+                            modal: {
+                                noResultsText: '无法找到相关结果',
+                                resetButtonTitle: '清除查询条件',
+                                footer: {
+                                    selectText: '选择',
+                                    navigateText: '切换',
+                                    closeText: '关闭'
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
         outlineTitle: '目录',
 
         socialLinks: [
@@ -255,13 +240,13 @@ export default defineConfig({
             port: 5000,
             host: '0.0.0.0'
         },
-        plugins: [pagefindPlugin({   //使用 pagefind搜索插件 https://www.npmjs.com/package/vitepress-plugin-pagefind
-            customSearchQuery: chineseSearchOptimize,
-            btnPlaceholder: '搜索文档',
-            placeholder: '搜索文档',
-            emptyText: '没有内容',
-            heading: '共 {{searchResult}} 条结果'
-        })]
+        // plugins: [pagefindPlugin({   //使用 pagefind搜索插件 https://www.npmjs.com/package/vitepress-plugin-pagefind
+        //     customSearchQuery: chineseSearchOptimize,
+        //     btnPlaceholder: '搜索文档',
+        //     placeholder: '搜索文档',
+        //     emptyText: '没有内容',
+        //     heading: '共 {{searchResult}} 条结果'
+        // })]
         // 页面中设置 frontmatter pagefind-indexed: false 则不进行索引
     },
     // buildEnd: genFeed
