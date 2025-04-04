@@ -72,7 +72,7 @@
 
             <ArticleCC v-if="(frontmatter?.post)" /> <!-- 文章版权组件 -->
             <ArticleRelate v-if="(frontmatter?.post)" :key="md5(page.relativePath)" /> <!-- 文章相关推荐组件 -->
-
+            <Giscus />
         </template>
         <template #doc-bottom>
             <!-- 底部版权组件 -->
@@ -88,7 +88,7 @@ import md5 from 'blueimp-md5';
 import DefaultTheme from 'vitepress/theme'
 import Copyright from './Copyright.vue'
 import Player from './Player.vue';
-
+import Giscus from './giscus.vue';
 const { isPause } = toRefs(usePlayerStore());
 const { page, theme, frontmatter, isDark } = useData();
 

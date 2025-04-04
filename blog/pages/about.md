@@ -3,6 +3,7 @@ page: true
 title: 关于本站
 description: 
 aside: false
+comments: false
 ---
 
 <About />
@@ -13,11 +14,12 @@ aside: false
 
 使用`canvas`根据分类和标题自动生成封面，背景使用暖色，随机颜色的几何形状作为背景
 
-### 优化各方面
+### 优化各方面 v1.0.2
 
 - 使用config配置文件自动生成左侧导航栏
 - 添加CSS变量以便控制颜色
 
+### 添加评论支持 v1.0.3
 
 
 ---
