@@ -30,22 +30,22 @@ const router = useRouter()
 const hotArticles = [
     {
         title: 'WebSocket',
-        url: '/websocket',
+        url: '/2025/03/WebSocket/',
         date: '2025-03-23'
     },
     {
         title: '正则表达式',
-        url: '/regexp',
+        url: '/2025/03/Regular/',
         date: '2025-03-11'
     },
     {
         title: 'Cursor基础使用',
-        url: '/cursor-basic',
+        url: '/2025/03/Cursor/',
         date: '2025-02-02'
     },
     {
         title: 'Demo1',
-        url: '/demo1',
+        url: '/2025/04/Demo1/',
         date: '2025-04-02'
     },
     {
@@ -67,7 +67,7 @@ const hotArticles = [
 
 // 页面跳转
 const navigateTo = (url) => {
-    router.go(url)
+    router.go('/posts'+url)
 }
 </script>
 
@@ -89,29 +89,29 @@ const navigateTo = (url) => {
 .title {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     color: var(--vp-c-text-1);
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 6px;
-    opacity: 0.8;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    opacity: 0.9;
 }
 
 .hot-list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 }
 
 .hot-item {
     display: flex;
-    align-items: flex-start;
-    gap: 8px;
+    align-items: center;
+    gap: 12px;
     cursor: pointer;
 }
 
@@ -120,16 +120,22 @@ const navigateTo = (url) => {
 }
 
 .rank {
-    width: 16px;
-    height: 16px;
-    line-height: 16px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
     text-align: center;
-    border-radius: 3px;
-    font-size: 12px;
+    border-radius: 4px;
+    font-size: 13px;
     font-weight: 500;
     flex-shrink: 0;
+    color: var(--vp-c-text-2);
+    background-color: var(--vp-c-bg);
+    border: 1px solid var(--vp-c-divider);
+}
+
+.top3 {
     color: #fff;
-    background-color: var(--vp-c-text-3);
+    border: none;
 }
 
 .hot-item:nth-child(1) .rank {
@@ -137,43 +143,39 @@ const navigateTo = (url) => {
 }
 
 .hot-item:nth-child(2) .rank {
-    background-color: #ff7f50;
+    background-color: #2ed573;
 }
 
 .hot-item:nth-child(3) .rank {
-    background-color: #ffa502;
+    background-color: #1e90ff;
 }
 
 .content {
     flex: 1;
     min-width: 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 4px;
 }
 
 .article-title {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--vp-c-text-1);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     transition: color 0.2s;
-    margin-right: 8px;
-    flex: 1;
 }
 
 .article-meta {
     font-size: 12px;
     color: var(--vp-c-text-2);
-    flex-shrink: 0;
 }
 
 .date {
     display: flex;
     align-items: center;
-    white-space: nowrap;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 @media (max-width: 768px) {

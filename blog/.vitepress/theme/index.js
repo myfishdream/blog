@@ -42,7 +42,7 @@ const pinia = createPinia()
 
 import { h } from 'vue'
 import './style.css'
-import './Customize.css'
+import './customize.css'
 
 export default {
   ...DefaultTheme,
