@@ -1,9 +1,16 @@
 @import url(./pagefind.css);
+
 @font-face {
-    font-family: "beebee";
+    font-family: "Yuu";
     font-weight: 400;
     /* 定制字体 */
-    src: url("/static/font/beebee.woff") format("woff");    
+    /* 使用极简字体子集生成 */
+    /*
+    pip install fonttools
+    pyftsubset 原字体.ttf --text-file=chars.txt --output-file=mini-font.woff 
+    需安装Python！！！
+    */
+    src: url("/static/font/yuu.woff") format("woff");
     font-display: swap;
 }
 
@@ -12,19 +19,20 @@
     --vp-c-brand-1: #0057ff;
     --vp-c-brand-2: #0057ff;
     --vp-font-family-base: Fira Code, -apple-system, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica, Arial, sans-serif;
-    --vp-layout-max-width: 1480px;   /*官方默认 1440px*/
+    --vp-layout-max-width: 1480px;
+    /*官方默认 1440px*/
     --swiper-theme-color: var(--vp-c-brand);
     --fancybox-accent-color: var(--vp-c-brand-1);
-    --bgfilter: rgba(255,255,255,.9);
+    --bgfilter: rgba(255, 255, 255, .9);
 }
 
 .dark {
-    --bgfilter: rgba(27,27,31,.9);
+    --bgfilter: rgba(27, 27, 31, .9);
 }
 
 [aria-label="red"] {
     color: #f00 !important;
-  }
+}
 
 .Layout {
     min-height: calc(100vh - 78px);
@@ -32,7 +40,7 @@
 
 .VPNavBarTitle .title,
 .site-footer .title {
-    font-family: "beebee", var(--vp-font-family-base);
+    font-family: "Yuu", var(--vp-font-family-base);
 }
 
 .VPNavBarTitle .title {
@@ -76,6 +84,7 @@
 .VPDoc.has-aside .content-container {
     max-width: 100% !important;
 }
+
 .fireworkwrap {
     display: none;
 }
@@ -108,19 +117,21 @@
 @media (min-width: 960px) {
     .VPNavBar:not(.top) .content-body {
         position: relative;
-        background-color: var(--bgfilter)!important;
-        backdrop-filter:blur(8px);
+        background-color: var(--bgfilter) !important;
+        backdrop-filter: blur(8px);
     }
+
     .fireworkwrap {
         display: block;
     }
+
     .VPDoc .container>.content {
         padding: 0 32px 32px;
     }
 
     .VPSidebar {
         min-height: calc(100% - var(--vp-nav-height));
-        padding-bottom:32px!important;
+        padding-bottom: 32px !important;
     }
 
     .home .VPDoc:not(.has-sidebar):not(.has-aside) .container {
@@ -342,7 +353,8 @@ p.icons img {
     min-height: auto !important;
 }
 
-.VPNavBar .divider,.curtain {
+.VPNavBar .divider,
+.curtain {
     display: none !important;
 }
 
