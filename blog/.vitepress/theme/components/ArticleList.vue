@@ -9,15 +9,13 @@
               <img class="img bgimg" :src="article.frontmatter.cover" />
             </template>
             <template v-else>
-              <!-- <AutoCover 
+              <AutoCover 
                 class="img bgimg"
                 :title="article.frontmatter.coverTitle || article.frontmatter.title"
                 :categories="article.frontmatter.categories || []"
                 :width="800"
                 :height="400"
-              /> -->
-              <img class="img bgimg" src="../../../public/cover/default.png" />
-               
+              />
             </template>
           </a>
         </div>

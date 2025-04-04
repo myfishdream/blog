@@ -131,28 +131,14 @@ export default defineConfig({
         banner: [ //主页轮播，不需要就注释掉
             {
                 link: '/',
-                image: 'https://s21.ax1x.com/2025/04/04/pE6gN1e.png',
-                title: ''
-            },
-            {
-                link: '/',
-                image: 'https://s21.ax1x.com/2025/04/04/pE6gGtK.png',
-                title: ''
-            }, {
-                link: '/',
-                image: 'https://s21.ax1x.com/2025/04/04/pE6g8k6.png',
-                title: ''
-            },
-            {
-                link: '/',
-                image: 'https://i.postimg.cc/NfPvg4YH/image.png',
+                image: 'https://s21.ax1x.com/2025/02/22/pEl3qMt.jpg',
                 title: ''
             },
             {
                 link: '/',
                 image: 'https://s21.ax1x.com/2025/02/22/pEl3qMt.jpg',
                 title: ''
-            },
+            }
         ],
         // search: {
         //     provider: 'local',
@@ -235,9 +221,9 @@ export default defineConfig({
         website: {
             copyadd: false, //用户复制页面内容时尾巴自动添加版权声明
             perpage: 12, //列表页每页显示数量
-            homeBanner: false, //显示首页 banner,banner列表在上面 banner中配置
+            homeBanner: true, //显示首页 banner,banner列表在上面 banner中配置
             bannerHeight: 400, //banner高度
-            showWelcome: false,  //是否显示首页底部右下角弹框，（调试时弹框不显示的话先关闭浏览器再运行，因为有可能开启了缓存）内容请在组件.vitepress/theme/components/Welcome.vue编写
+            showWelcome: false, //是否显示首页底部右下角弹框，（调试时弹框不显示的话先关闭浏览器再运行，因为有可能开启了缓存）内容请在组件.vitepress/theme/components/Welcome.vue编写
             welcomeusestate: false, //底部弹框是否使用sessionStorage缓存(即不关闭页面仅显示一次)
             welcome: {
                 autoClose: 1000, //多长时间自动关闭，false为不关闭
