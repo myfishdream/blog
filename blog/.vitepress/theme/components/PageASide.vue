@@ -115,7 +115,7 @@
         </div>
         <div class="total" v-if="type !== 'articlelist'">
           <div class="cell views">
-            <strong class="strong">999+</strong>
+            <strong class="strong">{{ pageViews }}</strong>
             <span class="span">访问</span>
           </div>
           <div class="cell posts">
@@ -137,6 +137,8 @@ import { ref, onMounted, computed, toRefs, onUnmounted } from 'vue'
 import { useData } from 'vitepress';
 import { usePlayerStore } from '../../store/player';
 import { data as themeposts } from '../posts.data'
+import { getPageViews } from '../functions';
+
 const { theme, frontmatter } = useData();
 const { pushPlayList } = usePlayerStore();
 const {
@@ -152,6 +154,31 @@ const props = defineProps({
     default: 'left'
   }
 })
+
+const pageViews = ref(0);  // 默认值
+
+// 获取当前页面路径
+const getCurrentPath = () => {
+  if (typeof window !== 'undefined') {
+    return window.location.pathname.replace(/\/$/, '') || 'home';
+  }
+  return 'home';
+};
+
+// 获取访问量
+const fetchPageViews = async () => {
+  try {
+    const path = getCurrentPath();
+    const result = await getPageViews(path);
+    pageViews.value = result.count;
+  } catch (error) {
+    console.error('获取访问量失败:', error);
+  }
+};
+
+onMounted(() => {
+  fetchPageViews();
+});
 
 const talkword = ref('累了就歇，醒了再走。')
 const movementx = ref(50)

@@ -21,6 +21,20 @@ comments: false
 
 ### 添加评论支持 v1.0.3
 
+使用 [giscus仓库](https://github.com/giscus/giscus)
+
+  <ArticleLink :work="{
+    title: '由 GitHub Discussions 提供支持的评论系统。',
+    via:'https://github.com/giscus/giscus',
+    github: 'giscus/giscus',
+  }" />
+
+### 添加网站访问计数v1.0.4
+
+`supabase`提供数据存储服务[supabase官网](https://supabase.com/)
+
+
+
 
 ---
 

@@ -201,4 +201,155 @@ export function handleCopy(text) {
 
 }
 
+// Supabase配置信息
+const SUPABASE_URL = 'https://wyynppzrdxgjdtdrzdqu.supabase.co'
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind5eW5wcHpyZHhnamR0ZHJ6ZHF1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzkxMDYxMDAsImV4cCI6MjA1NDY4MjEwMH0.OEUVtD1N008Ld1X2usWkVbdCFJstXU2pTECrgi6ND0M'
+
+// 初始化Supabase客户端
+async function initSupabase() {
+    // 如果在浏览器环境中
+    if (typeof window !== 'undefined') {
+        // 动态导入supabase-js (避免服务端渲染问题)
+        const { createClient } = await import('@supabase/supabase-js')
+        return createClient(SUPABASE_URL, SUPABASE_KEY)
+    }
+    return null
+}
+
+// 记录和获取访问量
+export async function getPageViews(path = 'home') {
+    try {
+        const supabase = await initSupabase()
+        if (!supabase) return { count: "null" } // 如果supabase为空，返回null
+        
+        // 检查是否存在记录
+        const { data: existingData, error: selectError } = await supabase
+            .from('page_views')
+            .select('count')
+            .eq('path', path)
+            .single()
+            
+        if (selectError && selectError.code !== 'PGRST116') {
+            console.error('查询页面访问量时出错:', selectError)
+            return { count: 999 }
+        }
+        
+        if (existingData) {
+            // 更新计数
+            const newCount = existingData.count + 1
+            const { error: updateError } = await supabase
+                .from('page_views')
+                .update({ count: newCount, updated_at: new Date() })
+                .eq('path', path)
+                
+            if (updateError) {
+                console.error('更新访问量时出错:', updateError)
+                return { count: existingData.count }
+            }
+            
+            return { count: newCount }
+        } else {
+            // 创建新记录
+            const { data: newData, error: insertError } = await supabase
+                .from('page_views')
+                .insert([{ path, count: 1 }])
+                .select()
+                
+            if (insertError) {
+                console.error('创建访问量记录时出错:', insertError)
+                return { count: 1 }
+            }
+            
+            return { count: 1 }
+        }
+    } catch (error) {
+        console.error('访问量统计出错:', error)
+        return { count: 999 }
+    }
+}
+
+/*
+以下是创建表的SQL代码，包含配置访问权限和身份验证
+
+-- 创建页面访问量表
+CREATE TABLE page_views (
+  id SERIAL PRIMARY KEY,
+  path TEXT NOT NULL UNIQUE,
+  count INTEGER NOT NULL DEFAULT 0,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- 创建索引提高查询效率
+CREATE INDEX idx_page_views_path ON page_views(path);
+
+-- 启用行级安全策略（RLS）
+ALTER TABLE page_views ENABLE ROW LEVEL SECURITY;
+
+-- 创建策略允许匿名用户读取数据
+CREATE POLICY "允许匿名用户读取访问量" 
+ON page_views FOR SELECT 
+TO anon
+USING (true);
+
+-- 创建策略允许匿名用户插入新记录
+CREATE POLICY "允许匿名用户插入新记录" 
+ON page_views FOR INSERT 
+TO anon
+WITH CHECK (true);
+
+-- 创建策略允许匿名用户更新现有记录
+CREATE POLICY "允许匿名用户更新访问量" 
+ON page_views FOR UPDATE 
+TO anon
+USING (true);
+
+-- 创建函数用于自动更新updated_at字段
+CREATE OR REPLACE FUNCTION update_modified_column()
+RETURNS TRIGGER AS $$
+BEGIN
+    NEW.updated_at = NOW();
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+-- 创建触发器自动更新updated_at字段
+CREATE TRIGGER update_page_views_modtime
+BEFORE UPDATE ON page_views
+FOR EACH ROW
+EXECUTE FUNCTION update_modified_column();
+
+-- 可选：创建一个视图用于管理员查看访问量统计
+CREATE VIEW page_views_stats AS
+SELECT path, count, updated_at, 
+       EXTRACT(DAY FROM NOW() - updated_at) AS days_since_update
+FROM page_views
+ORDER BY count DESC;
+
+-- 可选：创建一个函数用于重置所有页面的访问量计数（管理员使用）
+CREATE OR REPLACE FUNCTION reset_page_views()
+RETURNS void AS $$
+BEGIN
+    UPDATE page_views SET count = 0, updated_at = NOW();
+END;
+$$ LANGUAGE plpgsql;
+*/
+
+
+/*
+
+在Supabase中配置身份验证的步骤：
+访问Supabase项目仪表板
+进入"身份验证"(Authentication)部分
+在"策略"(Policies)选项卡中，确保已经应用了上述RLS策略
+在"设置"(Settings)中，可以配置：
+允许匿名访问（已启用）
+设置JWT令牌过期时间
+启用/禁用自注册（可选）
+Supabase默认会使用JWT令牌进行身份验证。在我们的方案中，匿名用户（anon角色）具有读取和更新访问量的权限。如果需要更严格的控制，可以修改上述策略，仅允许更新特定条件下的记录。
+在函数中已使用的SUPABASE_URL和SUPABASE_KEY已经配置好，可以直接使用：
+URL: https://********.supabase.co
+匿名密钥: **********
+
+*/
 

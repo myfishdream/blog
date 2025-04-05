@@ -130,7 +130,7 @@ onMounted(() => {
 .articlelink {
   margin-bottom: 10px;
   max-width: 300px;
-  margin: 50px auto;
+  /* margin: 50px auto; */
   border-color: var(--vp-badge-info-border);
   color: var(--vp-badge-info-text);
   background-color: var(--vp-badge-info-bg);
@@ -341,4 +341,9 @@ onMounted(() => {
     }
   }
 
-}</style>
+}
+a{
+  border-bottom: none !important;
+}
+
+</style>

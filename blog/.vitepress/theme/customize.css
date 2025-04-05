@@ -136,7 +136,10 @@
   .DocSearch {
     --docsearch-primary-color: var(--vp-c-brand-1) !important;
   }
-  
+  /* 搜索结果选中 */
+  .result.selected{ 
+    border-color: #fbb105 !important;
+  }
   :root{
     --vp-layout-max-width: 1480px;
   }
@@ -155,7 +158,10 @@
 
   :root{
     --vp-c-indigo-1: #10b981;
+    --vp-c-indigo-2: #13a172;
   }
-  .result.selected{
-    border-color: #fbb105 !important;
+  
+  .vp-doc a{
+    border-bottom: 2px solid var(--vp-c-indigo-1);
   }
+ 
