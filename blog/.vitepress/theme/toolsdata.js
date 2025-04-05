@@ -1,4 +1,3 @@
-
 const badge = {
   new: 'NEW',
   hot: 'HOT',
@@ -17,6 +16,20 @@ export const toolsdata = [
     title: '最近访问',
     items: [
       {
+        title: 'Github探索',
+        desc: '兴趣推荐+每日热门',
+        link: 'https://github.com/explore',
+        linktxt: 'github.com',
+        badge: 'HOT',
+        badgeType: 'hot'
+      },
+      {
+        title: '掘金',
+        desc: '掘金是一个面向技术开发者的社区',
+        link: 'https://juejin.cn/',
+        linktxt: 'juejin.cn',
+      },
+      {
         title: 'Quick Reference',
         desc: '为开发人员分享快速参考备忘清单',
         link: 'https://wangchujiang.com/reference/',
@@ -28,6 +41,18 @@ export const toolsdata = [
         link: 'https://muyiy.cn/',
         linktxt: 'muyiy.cn',
       }
+    ]
+  },
+  {
+    title: '常用库',
+    items: [
+      {
+        title: 'Rollup',
+        desc: 'JavaScript 打包器',
+        link: 'https://cn.rollupjs.org/',
+        linktxt: 'rollupjs.org',
+      }
+
     ]
   },
   {
@@ -142,15 +167,7 @@ export const toolsdata = [
         desc: '在线代码压缩,二维码生成...',
         link: 'https://tool.lu/',
         linktxt: 'tool.lu',
-      },
-      {
-        title: '在线代办清单',
-        desc: '所有代办事项存储在本地',
-        link: 'https://ricocc.com/todo/',
-        linktxt: 'ricocc.com',
-        badge: 'Github项目',
-        badgeType: 'default'
-      },
+      },  
       {
         title: '路过图床',
         desc: '免费图床',
@@ -184,27 +201,7 @@ export const toolsdata = [
   {
     title: '开发',
     items: [
-      {
-        icon: 'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hl1ld9d136j2040040aa2.jpg',
-        title: 'wordpress',
-        desc: 'Wordpress Dashicons',
-        link: 'https://developer.wordpress.org/resource/dashicons/',
-        linktxt: 'wordpress.org',
-      },
-      {
-        icon: 'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hl1nmmgepyj2040040glq.jpg',
-        title: 'vitepress',
-        desc: 'VitePress开发文档',
-        link: 'https://vitepress.dev/',
-        linktxt: 'vitepress.dev',
-      },
-      {
-        icon: 'https://image.baidu.com/search/down?url=https://fc.sinaimg.cn/large/6364aa43gy1hl1nmmg8vtj20400400ss.jpg',
-        title: '图鸟组件库',
-        desc: 'uniapp组件图鸟开发文档',
-        link: 'https://vue3.tuniaokj.com/zh-CN/',
-        linktxt: 'tuniaokj.com',
-      },
+
       {
         title: 'MDN Web Docs',
         desc: '由 Mozilla 维护的开发者文档平台',
@@ -218,7 +215,7 @@ export const toolsdata = [
         linktxt: 'runoob.com',
       },
       {
-        title: 'ES6 教程',
+        title: 'ECMAScript6 教程',
         desc: '《ECMAScript 6 教程》是一本开源的 JavaScript 语言教程',
         link: 'https://wangdoc.com/es6/',
         linktxt: 'wangdoc.com',
@@ -323,4 +320,127 @@ export const toolsdata = [
       }
     ],
   },
+  {
+    title: '常用官网',
+    items: [
+      {
+        title: 'Vue',
+        desc: 'Vue 官网',
+        link: 'https://vuejs.org/',
+        linktxt: 'vuejs.org',
+      },
+      {
+        title: 'Vite',
+        desc: '下一代前端工具链',
+        link: 'https://cn.vitejs.dev/',
+        linktxt: 'cn.vitejs.dev',
+        badge: badge.hot,
+        badgeType: badgeType.hot
+      },
+      {
+        title: 'React',
+        desc: '用于构建用户界面的 JavaScript 库',
+        link: 'https://zh-hans.react.dev/',
+        linktxt: 'zh-hans.react.dev',
+      },
+      {
+        title: 'Ant Design',
+        desc: '企业级 UI 设计语言和 React 组件库',
+        link: 'https://ant-design.antgroup.com/index-cn',
+        linktxt: 'ant.design',
+      },
+      {
+        title: 'Ant Design Vue',
+        desc: 'Vue UI 组件库',
+        link: 'https://www.antdv.com/docs/vue/introduce-cn',
+        linktxt: 'antdv.com',
+      },
+      {
+        title: 'Element Plus',
+        desc: '基于 Vue 3 的组件库',
+        link: 'https://element-plus.org/zh-CN/',
+        linktxt: 'element-plus.org',
+      },
+      {
+        title: 'UniApp',
+        desc: '一次开发，多端发行的跨平台框架',
+        link: 'https://uniapp.dcloud.net.cn/',
+        linktxt: 'uniapp.dcloud.net.cn',
+        badge: badge.hot,
+        badgeType: badgeType.hot
+      },
+      {
+        title: 'Electron',
+        desc: '使用 JavaScript 构建跨平台桌面应用程序',
+        link: 'https://www.electronjs.org/zh/',
+        linktxt: 'electronjs.org',
+      },
+      {
+        title: 'Tauri',
+        desc: '构建体积更小、速度更快的桌面应用',
+        link: 'https://tauri.app/zh-cn/',
+        linktxt: 'tauri.app',
+        badge: badge.new,
+        badgeType: badgeType.new
+      },
+      {
+        title: 'Nuxt',
+        desc: '基于 Vue 的直观 Web 框架',
+        link: 'https://nuxt.com/',
+        linktxt: 'nuxt.com',
+      },
+      {
+        title: 'VitePress',
+        desc: 'Vite & Vue 驱动的静态网站生成器',
+        link: 'https://vitepress.dev/',
+        linktxt: 'vitepress.dev',
+      },
+      {
+        title: 'TailwindCSS',
+        desc: '功能类优先的 CSS 框架',
+        link: 'https://tailwindcss.com/',
+        linktxt: 'tailwindcss.com',
+        badge: badge.hot,
+        badgeType: badgeType.hot
+      },
+      {
+        title: 'Pinia',
+        desc: 'Vue 的状态管理库',
+        link: 'https://pinia.vuejs.org/zh/',
+        linktxt: 'pinia.vuejs.org',
+      },
+      {
+        title: 'VueUse',
+        desc: 'Vue 的实用工具库',
+        link: 'https://vueuse.org/',
+        linktxt: 'vueuse.org',
+      },
+ 
+      {
+        title: 'VueRouter',
+        desc: 'Vue 的路由管理库',
+        link: 'https://router.vuejs.org/',
+        linktxt: 'router.vuejs.org',
+      },
+      {
+        title: 'Flutter',
+        desc: 'Flutter 是 Google 开发的一个开源框架，用于构建跨平台的移动应用程序',
+        link: 'https://flutter.cn/',
+        linktxt: 'flutter.cn',
+      },
+      {
+        title: 'Dart',
+        desc: 'Dart 是 Google 开发的一种编程语言，用于构建跨平台的移动应用程序',
+        link: 'https://dart.cn/',
+        linktxt: 'dart.cn',
+      },
+      {
+        title: 'Bootstrap',
+        desc: 'Bootstrap 是一个用于快速开发响应式网站的 HTML、CSS 和 JavaScript 框架',
+        link: 'https://www.bootcss.com/',
+        linktxt: 'bootcss.com',
+      },
+
+    ]
+  }
 ]
