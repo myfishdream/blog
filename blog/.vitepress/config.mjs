@@ -29,6 +29,12 @@ export default defineConfig({
         yuucodeurl: 'https://blog.yumeng.icu/', //这里是内页ArticleLink组件用到的跳转第三方网址(备用下载地址)
         sidebar: [{}], //这里如果删掉，左侧栏的内容全部不显示。页面布局会变成通栏
         nav: [
+            {
+                text: '小工具', items:
+                    [
+                        { text: '色卡工具', link: '/tools/colors' },
+                    ]
+            },
             { text: '在线Markdown编辑器', link: 'https://editor.zhuiyue.vip:444/' },
 
         ],
