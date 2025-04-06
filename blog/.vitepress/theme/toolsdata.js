@@ -268,7 +268,7 @@ export const toolsdata = [
       {
         title: 'DeepSeek',
         desc: '深度求索大模型对话工具',
-        link: 'https://deepseek.com/',
+        link: 'https://chat.deepseek.com/',
         linktxt: 'deepseek.com',
       },
       {
