@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 import { head } from './theme/head';
 import mdItCustomAttrs from 'markdown-it-custom-attrs'
 import { chineseSearchOptimize, pagefindPlugin } from 'vitepress-plugin-pagefind'
+import { title } from 'process';
 //  https://github.com/ATQQ/sugar-blog/blob/master/packages/vitepress-plugin-pagefind/README-zh.md  
 export default defineConfig({
     lang: 'zh-cn',
@@ -106,41 +107,16 @@ export default defineConfig({
                 "title": "一路山路",
                 "author": "毛不易",
                 "url": "https://www.kumeiwp.com/wj/178810/2023/12/12/94ddfee636c78380b9c50d0ce6e07bd5.mp3",
-                "pic": "https://enshimama.oss-cn-shanghai.aliyuncs.com/smartgallery/music/01.jpg",
+                "pic": "",
                 "lrc": ""
+            },{
+                "id": 2,
+                title:'海阔天空',
+                author:'Beyond',
+                url: 'https://www.kumeiwp.com/wj/213316/2024/05/12/fcf1fe6959ff836ccb1fe8b7c9ec5dcf.mp3',
+                pic: '',
+                lrc: ''
             }
-            // {
-            //     "id": 1,
-            //     "title": "陷落Falling",
-            //     "author": "不知名选手Au / 马也_Crabbit",
-            //     "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE0Nzk=",
-            //     "pic": "https://enshimama.oss-cn-shanghai.aliyuncs.com/smartgallery/music/01.jpg",
-            //     "lrc": ""
-            // },
-            // {
-            //     "id": 2,
-            //     "title": "一个人想着一个人 ",
-            //     "author": "如懿",
-            //     "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE0ODA=",
-            //     "pic": "https://enshimama.oss-cn-shanghai.aliyuncs.com/smartgallery/music/02.jpg",
-            //     "lrc": ""
-            // },
-            // {
-            //     "id": 3,
-            //     "title": "夜车（Cover 曾轶可）",
-            //     "author": "姜铭杨",
-            //     "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE0ODE=",
-            //     "pic": "https://enshimama.oss-cn-shanghai.aliyuncs.com/smartgallery/music/03.jpg",
-            //     "lrc": ""
-            // },
-            // {
-            //     "id": 4,
-            //     "title": "迎春花 / 財神到 / 祝福你 (廣東)",
-            //     "author": "邓丽君 / 林子祥 / 甄妮",
-            //     "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE4NTI=",
-            //     "pic": "",  
-            //     "lrc": ""
-            // }
         ],
         banner: [ //主页轮播，不需要就注释掉
             {

@@ -25,6 +25,16 @@ export const usePlayerStore = defineStore({
         playerShow: false, // 控制播放器显隐
     }),
     getters: {
+        // 获取播放列表
+        playlist: (state) => {
+            return state.playList;
+        },
+        
+        // 获取当前歌曲索引
+        currentIndex: (state) => {
+            return state.playList.findIndex((song) => song.id === state.id);
+        },
+        
         playListCount: (state) => { // 播放列表歌曲总数
             return state.playList.length;
         },
@@ -88,7 +98,7 @@ export const usePlayerStore = defineStore({
             this.playList = [];
             this.showPlayList = false;
             const audio = this.audio;
-            audio.stop();
+            audio.pause();
             let transTimer = null
             if (transTimer) clearTimeout(transTimer)
             transTimer = setTimeout(() => {
@@ -96,18 +106,32 @@ export const usePlayerStore = defineStore({
             }, 500);
         },
         // 播放
-        async play(song) {
+        async play(index) {
+            let song;
+            if (typeof index === 'number') {
+                // 如果传入的是索引，从播放列表获取对应歌曲
+                if (index >= 0 && index < this.playList.length) {
+                    song = this.playList[index];
+                } else {
+                    return;
+                }
+            } else if (typeof index === 'object') {
+                // 如果传入的是歌曲对象
+                song = index;
+            } else {
+                return;
+            }
+            
             if (song.id == this.id) return;
             this.ended = false;
             this.isPause = false;
             this.isPlaying = false;
-            // const data = await getSongUrl(id);
-            // 筛掉会员歌曲和无版权歌曲 freeTrialInfo字段为试听时间
+            
             if (song.url) {
                 const audio = this.audio;
                 this.id = song.id;
                 this.song = song;
-                // this.songDetail();
+                
                 let transTimer = null
                 if (transTimer) clearTimeout(transTimer)
                 transTimer = setTimeout(() => {
@@ -116,11 +140,10 @@ export const usePlayerStore = defineStore({
                     audio.play();
                     this.isPlaying = true;
                     this.interval()
-                    // this.songUrl = {};
                     this.url = this.song.url;
                 }, 500)
             } else {
-                this.deleteSong(this.id);
+                if (this.id) this.deleteSong(this.id);
                 this.next();
             }
         },
@@ -149,7 +172,7 @@ export const usePlayerStore = defineStore({
                 this.isPause = false;
                 this.isPlaying = true;
                 const audio = this.audio;
-                // audio.seek(0);
+                audio.currentTime = 0;
                 audio.play();
             }, 1500)
         },
@@ -158,38 +181,71 @@ export const usePlayerStore = defineStore({
             if (this.loopType === 2) {
                 this.randomPlay();
             } else {
-                toast("播放结束", {
-                    autoClose: 2000,
-                    "type": "success",
-                    "hideProgressBar": true,
-                });
-                this.id = 0
-                this.isPause = true
-                this.song = {};
+                if (this.playList.length > 0) {
+                    if (this.nextSong) {
+                        this.play(this.nextSong);
+                    } else {
+                        toast("没有下一首", {
+                            autoClose: 2000,
+                            "type": "warning",
+                            "hideProgressBar": true,
+                        });
+                    }
+                } else {
+                    toast("播放列表为空", {
+                        autoClose: 2000,
+                        "type": "warning",
+                        "hideProgressBar": true,
+                    });
+                }
             }
         },
         // 上一曲
         prev() {
-            if (this.id === this.prevSong.id) {
-                toast("没有上一首", {
+            if (this.playList.length > 0) {
+                if (this.prevSong) {
+                    this.play(this.prevSong);
+                } else {
+                    toast("没有上一首", {
+                        autoClose: 2000,
+                        "type": "warning",
+                        "hideProgressBar": true,
+                    });
+                }
+            } else {
+                toast("播放列表为空", {
                     autoClose: 2000,
                     "type": "warning",
                     "hideProgressBar": true,
                 });
-            } else {
-                this.play(this.prevSong);
             }
         },
         // 随机播放
         randomPlay() {
-            this.play(
-                this.playList[getRandomInt(this.playList.length)],
-            )
+            if (this.playList.length > 0) {
+                const randomIndex = getRandomInt(this.playList.length);
+                this.play(this.playList[randomIndex]);
+            } else {
+                toast("播放列表为空", {
+                    autoClose: 2000,
+                    "type": "warning",
+                    "hideProgressBar": true,
+                });
+            }
         },
         // 播放、暂停
         togglePlay() {
             if (!this.song.id) {
-                this.randomPlay()
+                if (this.playList.length > 0) {
+                    this.randomPlay();
+                } else {
+                    toast("播放列表为空", {
+                        autoClose: 2000,
+                        "type": "warning",
+                        "hideProgressBar": true,
+                    });
+                    return;
+                }
             }
             this.isPlaying = !this.isPlaying;
             const audio = this.audio;
@@ -199,6 +255,8 @@ export const usePlayerStore = defineStore({
             } else {
                 audio.play();
                 this.isPause = false;
+                // 确保播放器始终可见
+                this.playerShow = true;
             }
         },
         setPlay() {
@@ -226,21 +284,27 @@ export const usePlayerStore = defineStore({
         // 快进
         forward(val) {
             const audio = this.audio;
-            // audio.seek(this.currentTime + val);
+            if (audio && this.currentTime) {
+                audio.currentTime = this.currentTime + val;
+            }
         },
         // 后退
         backup(val) {
             const audio = this.audio;
-            if (this.currentTime < 5) {
-                // audio.seek(0)
-            } else {
-                // audio.seek(this.currentTime - val);
+            if (audio) {
+                if (this.currentTime < 5) {
+                    audio.currentTime = 0;
+                } else {
+                    audio.currentTime = this.currentTime - val;
+                }
             }
         },
         // 修改播放时间
         onSliderChange(val) {
             const audio = this.audio;
-            // audio.seek(val);
+            if (audio) {
+                audio.currentTime = val;
+            }
         },
         // 定时器
         interval() {
@@ -260,14 +324,15 @@ export const usePlayerStore = defineStore({
                 );
             }
         },
-        // 控制播放器显隐
         setPlayerShow(val) {
-            // val 0:显示 1:隐藏
-            if (val === 0) {
-                this.playerShow = true;
-            } else {
-                this.playerShow = false;
+            this.playerShow = val;
+            // 确保即使播放器显示，但是音频仍然保持暂停状态
+            if (val && this.isPause) {
+                const audio = this.audio;
+                if (audio) {
+                    audio.pause();
+                }
             }
         }
     }
-})
+});
