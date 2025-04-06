@@ -40,7 +40,7 @@ import './components/snow.css'  //一个 css3雪花特效，用于暗黑模式�
 const pinia = createPinia()
 
 
-import { h } from 'vue'
+
 import './style.css'
 import './customize.css'
 

@@ -150,6 +150,11 @@ export const toolsdata = [
         desc: '免费素材网站，包含原始格式',
         link: 'https://www.freepik.com',
         linktxt: 'freepik.com',
+      },{
+        title: 'Vue后台管理系统',
+        desc: 'Vue后台管理系统模版集合',
+        link: 'http://vue.easydo.work/',
+        linktxt: 'vue.easydo.work',
       }
     ],
   },
