@@ -36,6 +36,12 @@ export const toolsdata = [
         linktxt: 'wangchujiang.com/reference',
       },
       {
+        title: "Base64",
+        desc: "Base64编码解码",
+        link: "https://tool.lu/base64image/",
+        linktxt: "tool.lu/base64image",
+      },
+      {
         title: '前端进阶',
         desc: '木易杨前端进阶',
         link: 'https://muyiy.cn/',
@@ -58,6 +64,12 @@ export const toolsdata = [
   {
     title: '设计',
     items: [
+      {
+        title: "iconfont",
+        desc: "阿里巴巴矢量图标库",
+        link:'https://www.iconfont.cn/',
+        linktxt: 'iconfont.cn',
+      },
       {
         icon: 'https://uiverse.io/static/images/uiverse-logo.svg',
         title: 'uiverse',
