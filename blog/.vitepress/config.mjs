@@ -3,8 +3,6 @@ import { defineConfig } from 'vitepress'
 // import { genFeed } from './theme/genFeed'
 import { head } from './theme/head';
 import mdItCustomAttrs from 'markdown-it-custom-attrs'
-import { chineseSearchOptimize, pagefindPlugin } from 'vitepress-plugin-pagefind'
-import { title } from 'process';
 //  https://github.com/ATQQ/sugar-blog/blob/master/packages/vitepress-plugin-pagefind/README-zh.md  
 export default defineConfig({
     lang: 'zh-cn',
