@@ -6,6 +6,7 @@ import mdItCustomAttrs from 'markdown-it-custom-attrs'
 //  https://github.com/ATQQ/sugar-blog/blob/master/packages/vitepress-plugin-pagefind/README-zh.md  
 export default defineConfig({
     lang: 'zh-cn',
+    cleanUrls: true,
     markdown: {
         config: (md) => {
             // use more markdown-it plugins!
