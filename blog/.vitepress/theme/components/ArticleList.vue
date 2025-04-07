@@ -16,7 +16,7 @@
                 :width="800"
                 :height="400"
               /> -->
-              <img class="img bgimg" src="/cover/default.png" />
+              <img class="img bgimg" src="/cover/default1.png" />
             </template>
           </a>
         </div>

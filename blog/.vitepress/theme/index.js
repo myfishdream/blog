@@ -5,7 +5,7 @@ import Lantern from './components/Lantern.vue'
 import NewLayout from './components/NewLayout.vue'
 import Archives from './components/Archives.vue'
 import About from './components/About.vue'
-import Feed from './components/Feed.vue'
+// import Feed from './components/Feed.vue'
 import Tags from './components/Tags.vue'
 import ArticleMetadata from './components/ArticleMetadata.vue'
 import ArticleBread from './components/ArticleBread.vue'
@@ -32,7 +32,7 @@ import 'floating-vue/dist/style.css'
 import Vue3Toasity from 'vue3-toastify';  //使用 toast 库。用于弹框提示反馈等。教程见https://vue3-toastify.js-bridge.com/
 import 'vue3-toastify/dist/index.css';
 import Countdown from './components/Countdown.vue'
-import demo from './components/demo.vue'
+// import demo from './components/demo.vue'
 
 import './components/style.css'
 import './components/snow.css'  //一个 css3雪花特效，用于暗黑模式下显示雪花
@@ -54,7 +54,7 @@ export default {
     app.component('Tags', Tags) //标签组件
     app.component('Archives', Archives) //归档组件
     app.component('About', About) //关于组件
-    app.component('Feed', Feed) //动态组件
+    // app.component('Feed', Feed) //动态组件
     app.component('Home', Home) //首页组件
     app.component('Page', Page) //页面组件
     app.component('ArticleMetadata', ArticleMetadata) //文章元数据组件
@@ -74,7 +74,7 @@ export default {
     app.component('Tools', Tools) //工具组件
     app.component('PopularDocs', PopularDocs) //链接组件
     app.component('Welcome', Welcome) //欢迎组件
-    app.component('demo', demo) //demo组件
+    // app.component('demo', demo) //demo组件
     app.component('Countdown', Countdown) //倒计时组件
     app.use(pinia) //使用状态管理库
     app.use(FloatingVue, {
