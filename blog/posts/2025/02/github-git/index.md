@@ -27,7 +27,7 @@ description: github的访问，快捷键，功能，桌面端Github Desktop，�
 
 在顶部`Type to search`搜索框中搜索项目 **<u>dev sidecar</u>** 
 
-![image-20250127112429020.png](./assets/image-20250127112429020.png)
+![image-20250127112429020.png](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111026_0.png)
 
 点击Releases ，下拉，下载最新版本
 
@@ -41,7 +41,7 @@ description: github的访问，快捷键，功能，桌面端Github Desktop，�
 
 当一个文件夹被Git管理起来后，就变成一个Git仓库，被Git管理的文件仓库下面会生成一个`.git`的子文件夹，用于存放Git的版本控制信息
 
-![image-20250127100831819](./assets/image-20250127100831819.png)
+![image-20250127100831819](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111029_0.png)
 
 Git使用`commit`(提交)作为版本控制的基本单元，每完成一次commit，Git都保存了一个仓库，此时状态的快照，文件夹里面所有文件的状态都被记录下来，随着commit的越来越多，会形成一条**commit的历史链路**。这样整个仓库都是可回溯的，可以查看历史记录的，每个项目参与者的每一个改动都会被这个commit链路记录下来
 
@@ -66,7 +66,7 @@ open 指的是还没有解决的bug，或者还在讨论的问题
 
 closed 指的是已经解决的bug，或者已经结束的讨论
 
-![image-20250127125122949](./assets/image-20250127125122949.png)
+![image-20250127125122949](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111032_0.png)
 
 在使用和学习开源项目中，不妨在搜索框 ↑  中搜一搜，因为有些问题别人可能也遇到了，并且在Issue中已经有人给出了解决方案
 
@@ -187,7 +187,7 @@ View git blame 查看文件提交历史（每行代码的提交者）
 
 ## 开源协议
 
-![image-20250127155653013](./assets/image-20250127155653013.png)
+![image-20250127155653013](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111039_0.png)
 
 GPL：其他人修改完代码的项目也必须保持开源（衍生作品也必须开源）
 
@@ -235,13 +235,13 @@ HTTPS/SSH
 
 在Github上创建分支
 
-![image-20250127165241771](./assets/image-20250127165241771.png)
+![image-20250127165241771](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111041_0.png)
 
 **基于main分支以外的分支也可以创建分支**
 
 在仓库页面点击**分支**
 
-![image-20250127170118840](./assets/image-20250127170118840.png)
+![image-20250127170118840](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111049_0.png)
 
 如果分支基于feature分支创建，那么分支将包含之前feature分支和main分支所有的代码，但是如果只是基于main创建只能看到main分支的代码
 
@@ -265,15 +265,15 @@ pull request**会比较两个分支之间的代码差异**
 
 管理员可以点击`Files changed`开始审核代码 
 
-![image-20250127171935476](./assets/image-20250127171935476.png)
+![image-20250127171935476](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111052_0.png)
 
 审核时，管理员可以比较代码的不同，他可以在某一行上点击加号留下评论，最终他会给一个代码审核的意见
 
-![image-20250127172259929](./assets/image-20250127172259929.png)
+![image-20250127172259929](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111054_0.png)
 
 最后，管理员认为代码OK，可以合并的时候，就可以点击`merge pull request`
 
-![image-20250127172432858](./assets/image-20250127172432858.png)
+![image-20250127172432858](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111061_0.png)
 
 ## Github工作流程
 
@@ -293,7 +293,7 @@ Wiki也是一个独立的Git仓库，可以独立克隆和推送
 
 用于帮助项目维护者和贡献者分析和理解他们代码库的状态和活动。
 
-![image-20250127190118326](./assets/image-20250127190118326.png)
+![image-20250127190118326](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111065_0.png)
 
 #### Pulse
 
@@ -378,7 +378,7 @@ current iteration 指的是当前迭代的工单状态
 
 #### **部分提交**
 
-![image-20250128102657574](./assets/image-20250128102657574.png)
+![image-20250128102657574](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111075_0.png)
 
 #### 放弃更改
 
@@ -390,7 +390,7 @@ current iteration 指的是当前迭代的工单状态
 >
 > 放弃的文件会添加到**回收站**内，文件可在**电脑本地回收站**再次找回
 
-![image-20250128102803844](./assets/image-20250128102803844.png)
+![image-20250128102803844](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111081_0.png)
 
 #### 保存更改
 
@@ -398,7 +398,7 @@ current iteration 指的是当前迭代的工单状态
 git stash		
 ```
 
-![image-20250128103642881](./assets/image-20250128103642881.png)
+![image-20250128103642881](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111087_0.png)
 
 右键 `1 changed file`，第一个是**放弃所有更改**，第二个是**保存所有更改**
 
@@ -406,7 +406,7 @@ git stash
 
 **查看保存的更改代码**：
 
-![image-20250128104103125](./assets/image-20250128104103125.png)
+![image-20250128104103125](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111091_0.png)
 
 保存更改代码后，即可随意切换分支了
 
@@ -445,7 +445,7 @@ git reset
 
 点击`History`，右键之前版本选择`Reset to commit`即可
 
-![image-20250128110847798](./assets/image-20250128110847798.png)
+![image-20250128110847798](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111101_0.png)
 
 > [!NOTE]
 >
@@ -473,7 +473,7 @@ git reset
 >
 > **mix**指的是撤销提交，但是保留我的本地文件更改
 >
-> ![image-20250128112051964](./assets/image-20250128112051964.png)
+> ![image-20250128112051964](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111106_0.png)
 >
 > 意思： 本地仓库分支与远端仓库没有同步，远端仓库有一个提交，但是本地没有，因为刚刚通过命令行撤回了，**如果点击`pull`会把那次提交又拿回来了**
 >
@@ -487,7 +487,7 @@ git reset
 >
 > `-f`指的是强制推送，不论远端分支是什么状态，就把**本地分支强制覆盖到远端**（高危操作）
 >
-> ![image-20250128112754519](./assets/image-20250128112754519.png)
+> ![image-20250128112754519](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111110_0.png)
 
 #### 反向提交
 
@@ -550,11 +550,11 @@ git merge
 
 首先切换到接受合并的分支
 
-![image-20250128183003800](./assets/image-20250128183003800.png)
+![image-20250128183003800](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111117_0.png)
 
 点击`Choose a branch to merge into feature`，选择一个分支合并进feature分支
 
-![image-20250128183226281](./assets/image-20250128183226281.png)
+![image-20250128183226281](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111120_0.png)
 
 #### `Create a merge commit`
 
@@ -562,7 +562,7 @@ git merge
 git merge main
 ```
 
-![image-20250128183725133](./assets/image-20250128183725133.png)
+![image-20250128183725133](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111128_0.png)
 **Create a merge commit**：创建一个新的commit，合并到一起
 
 #### `Squash and merge`
@@ -571,7 +571,7 @@ git merge main
 git merge --squash main
 ```
 
-![image-20250128184249563](./assets/image-20250128184249563.png)
+![image-20250128184249563](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111134_0.png)
 **Squash and merge**：把commit3,4,5压缩成一个提交合并进feature分支
 
 #### `Rebase`
@@ -580,7 +580,7 @@ git merge --squash main
 git rebase main
 ```
 
-![image-20250128184803711](./assets/image-20250128184803711.png)
+![image-20250128184803711](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111139_0.png)
 
 **Rebase**（变基 - 更改地基）：把main分支合并进了feature分支，把feature分支变基到了main分支
 
@@ -601,7 +601,7 @@ git rebase main
 
 Github网页有相关**图形化界面**功能
 
-![image-20250128214104650](./assets/image-20250128214104650.png)
+![image-20250128214104650](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111145_0.png)
 
 ### 优选提交
 
@@ -625,7 +625,7 @@ Github网页有相关**图形化界面**功能
 > git cherry-pick c3 c4
 > ```
 >
-> ![image-20250128214954084](./assets/image-20250128214954084.png)
+> ![image-20250128214954084](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111150_0.png)
 >
 > **使用Desktop操作**
 >
@@ -653,13 +653,13 @@ Github网页有相关**图形化界面**功能
 >
 > 将 feature 合并到 main 时将出现 1 个冲突文件
 
-![image-20250128220613639](./assets/image-20250128220613639.png)
+![image-20250128220613639](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111155_0.png)
 
 **Abort merge**：取消这次的merge，两个分支各自还原回去
 
 **Continue merge**：需要先手动解决冲突，即编辑文件，修改成理想状态
 
-![image-20250128220956612](./assets/image-20250128220956612.png)
+![image-20250128220956612](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111159_0.png)
 
 修改完后即可回到Desktop点击`Continue merge`
 
@@ -685,7 +685,7 @@ git merge feature
 
 会显示冲突信息
 
-![image-20250128222919756](./assets/image-20250128222919756.png)
+![image-20250128222919756](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111164_0.png)
 
 打开编辑器手动处理冲突
 
@@ -707,17 +707,17 @@ git commit -m 'Resolve test file conflict'
 >
 > 场景：两个分支同时改动了同一个文件的名字
 
-![image-20250128223913678](./assets/image-20250128223913678.png)
+![image-20250128223913678](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111168_0.png)
 
 点击关闭提示
 
-![image-20250128224021558](./assets/image-20250128224021558.png)
+![image-20250128224021558](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111175_0.png)
 
 选中所有文件右键`Discard 3 selected changes`全部撤销更改
 
 打开目录调整为理想状态回到Desktop
 
-![image-20250128224258935](./assets/image-20250128224258935.png)
+![image-20250128224258935](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111180_0.png)
 
 点击`View conflicts`，最后再提交上去即可
 
@@ -896,7 +896,7 @@ IDEA作为一个代码编辑软件，它会自动生成一些文件，但是这�
 
 ### 解决冲突
 
-![image-20250203171719546](./assets/image-20250203171719546.png)
+![image-20250203171719546](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111187_0.png)
 
 如果选择`Accept Yours`，使用自己的文件，会直接把对方的文件覆盖掉
 
@@ -912,7 +912,7 @@ IDEA作为一个代码编辑软件，它会自动生成一些文件，但是这�
 >
 > 使用`git pull`的时候，它会自动创建一个新的**commit**，表示将本地和远端合并起来，但是当项目增大，你的分支历史上的commit会越来越多，显得**杂乱**
 >
-> ![image-20250203173003303](./assets/image-20250203173003303.png)
+> ![image-20250203173003303](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111192_0.png)
 >
 > 我们想达成的仅仅是，把自己的提交挂到你同事提交之后，即可使用`git pull rebase`，从而不产生一次新的提交
 
@@ -953,7 +953,7 @@ IDEA作为一个代码编辑软件，它会自动生成一些文件，但是这�
 | git reset --hard 'commit'  | 撤回提交与暂存区+工作区，不保留任何更改           |          |
 | git reset --keep 'commit'  | 撤回提交与暂存区+工作区，未提交的改动保留在工作区 |          |
 
-![](./assets/2024-11-26_201745.jpg)
+![](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111195_0.jpg)
 
 **revert**
 
@@ -999,7 +999,7 @@ Stash存储更改
 
 当回到分支时，可以选择Stash选项卡，把保存的更改再拿回来
 
-![image-20250203181704524](./assets/image-20250203181704524.png)
+![image-20250203181704524](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111198_0.png)
 
 **apply**指的是取回更改，但是不删除保存的更改
 
@@ -1113,9 +1113,9 @@ Token：进入GIthub点击Setting，下拉找到Developer settings，有一个Pe
 
 打开，点击Token(classic)，点击Generate new Token
 
-![image-20250207213503272](./assets/image-20250207213503272.png)
+![image-20250207213503272](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111204_0.png)
 
-![image-20250207213532713](./assets/image-20250207213532713.png)
+![image-20250207213532713](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111206_0.png)
 
 
 
@@ -1157,7 +1157,7 @@ Token：进入GIthub点击Setting，下拉找到Developer settings，有一个Pe
 
 当你推送的时候，就会拒绝
 
-![image-20250207214804606](./assets/image-20250207214804606.png)
+![image-20250207214804606](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111209_0.png)
 
 所以，在实践中，推荐每个人都使用一个独立的分支开发代码，避免此类问题
 
@@ -1167,7 +1167,7 @@ Token：进入GIthub点击Setting，下拉找到Developer settings，有一个Pe
 
 问题是：git pull = git fetch + git merge
 
-![image-20250207215256057](./assets/image-20250207215256057.png)
+![image-20250207215256057](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111274_0.png)
 
 因为你的提交和你同事的提交有共同的祖先，Git会merge两个分支的提交，并且创建一个额外的merge提交
 
@@ -1181,15 +1181,15 @@ Token：进入GIthub点击Setting，下拉找到Developer settings，有一个Pe
 
 此命令会暂时把你的提交放到一边，然后拉取远端仓库的提交，再把你的提交挂在后面，即可保持提交线性的干净
 
-![image-20250207220422773](./assets/ezgif-6e02a85964477.gif)
+![image-20250207220422773](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111213_0.gif)
 
 使用 git pull
 
-![image-20250207220422773](./assets/image-20250207220422773.png)
+![image-20250207220422773](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111223_0.png)
 
 使用git pull --rebase
 
-![image-20250207220559302](./assets/image-20250207220559302.png)
+![image-20250207220559302](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111225_0.png)
 
 现在就没有merge提交了
 
@@ -1201,17 +1201,17 @@ git config pull.rebase true
 
 现在使用git pull即使不加--rebase命令也默认使用rebase命令，或者修改为false改回来
 
-![image-20250207220855478](./assets/image-20250207220855478-1738937336766-1.png)
+![image-20250207220855478](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111231_0.png)
 
 Desktop也会变化
 
-![image-20250207220930291](./assets/image-20250207220930291.png)
+![image-20250207220930291](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111234_0.png)
 
 在IDEA中，这个Update其实就是Git pull 
 
 
 
-![image-20250207221012909](./assets/image-20250207221012909.png)
+![image-20250207221012909](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111238_0.png)
 
 ### 重命名 移动 删除
 
@@ -1301,7 +1301,7 @@ git branch 查看所有的本地分支
 
 git branch -a 查看所有分支（包括远端的分支）
 
-![image-20250208204326590](./assets/image-20250208204326590.png)
+![image-20250208204326590](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111247_0.png)
 
 前面是remotes的是远端分支
 
@@ -1400,7 +1400,7 @@ git lfs track '文件类型'	*.mp4表示我系统的所有MP4文件都由大文�
 - 本地仓库
 - 远程仓库
 
-![image-20250127213456310](./assets/image-20250127213456310.png)
+![image-20250127213456310](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111251_0.png)
 
 ## Github Action
 
@@ -1436,7 +1436,7 @@ https://github.com/marketplace Github市场，其中也有Action选项卡，可�
 
 引用别人的Action，使用uses: 作者名称/Action的名称@版本号
 
-![image-20250208215204762](./assets/image-20250208215204762.png)
+![image-20250208215204762](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111254_0.png)
 
 ### 术语
 
@@ -1468,7 +1468,7 @@ uses:	actions/checkout@v4  检出代码，也就是把项目的代码检出到�
 
  在jobs中有很多job
 
-![image-20250208220818601](./assets/image-20250208220818601.png)
+![image-20250208220818601](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744111257_0.png)
 
 申请了一个Windows虚拟环境，使用pyinstaller，用with传递参数
 
