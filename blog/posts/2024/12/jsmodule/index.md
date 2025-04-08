@@ -45,7 +45,7 @@ description: JavaScript
 - **导出（暴露）：**模块公开其内部的一部分（如变量、函数等），使这些内容可以被其他模块使用。  
 - **导入（引入）：**模块引入和使用其他模块导出的内容，以重用代码和功能。  
 
-![image-20250217202039964](./assets/image-20250217202039964.png)
+![image-20250217202039964](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109156_0.png)
 
 
 
@@ -116,7 +116,7 @@ const student = require('./student')
 >
 > 每个模块内部的：`this`、`exports`、`modules.exports`在初始时，都指向**<span style="color:#CC0000;">同一个</span>**空对象，该空对象就是当前模块导出的数据，如下图：
 >
-> ![image-20250217202918792](./assets/image-20250217202918792.png)
+> ![image-20250217202918792](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109165_0.png)
 >
 > 无论如何修改导出对象，最终导出的都是`module.exports`的值。
 >

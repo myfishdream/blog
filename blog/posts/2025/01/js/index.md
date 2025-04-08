@@ -231,13 +231,13 @@ function outer() {
 
 ## 面向过程
 
-![](./assets/面向过程-1737775247078-3.png)
+![](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109337_0.png)
 
 面向过程就是分析出解决问题所需要的步骤，然后用函数将这些步骤一一实现，使用的时候在一个一个的一次调用即可。
 
 ## 面向对象
 
-![](./assets/面向对象.png)
+![](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109339_0.png)
 
 在面向对象程序开发思想中，每一个对象都是功能中心，具有明确分工。
 
@@ -411,7 +411,7 @@ JavaScript规定，每一个构造函数都有一个**prototype属性**，指向
 
 基于原型对象的继承使得不同构造函数的原型对象关联在一起，并且这种关联的关系是一种链状的结构，我们将原型对象的链状结构关系称为原型链
 
-![](assets\1676793388695.png)
+![](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109347_0.png)
 
 ```javascript
  // function Objetc() {}

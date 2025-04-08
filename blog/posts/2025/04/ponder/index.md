@@ -24,7 +24,7 @@ outline: [2,3]
 
 ### 自定义滚动条
 
-![image-20250220223401929](./assets/image-20250220223401929.png)
+![image-20250220223401929](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109840_0.png)
 
 ```css
 

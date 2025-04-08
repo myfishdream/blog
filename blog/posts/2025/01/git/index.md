@@ -29,7 +29,7 @@ outline: deep
 
 克隆仓库：`git clone url`
 
-![](assets/2024-11-26_133742.png)
+![](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109247_0.png)
 
 #### 文件状态：
 
@@ -38,7 +38,7 @@ outline: deep
 - 已修改（Modified）：指文件内容发生变化，但是还没有添加至暂存区
 - 已暂存（Staged）：指文件修改后并且已经添加至暂存区的文件
 
-![](assets/2024-11-26_134748.png)
+![](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109254_0.png)
 
 - `git init` 创建仓库
 
@@ -78,7 +78,7 @@ outline: deep
 
 回退版本：`git reset`
 
-![](assets/2024-11-26_201745.jpg)
+![](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109259_0.jpg)
 
 查看暂存区内容：`git ls-files`
 
@@ -126,7 +126,7 @@ outline: deep
 
 查看分支之间差异：`git diff <branchName> <branchName>`
 
-![](assets/2024-11-26_210333.jpg)
+![](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109262_0.jpg)
 
 > 图片有误
 
@@ -165,7 +165,7 @@ outline: deep
 >
 > 
 
-![](assets/2024-11-27_212747.jpg)
+![](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109265_0.jpg)
 
 
 
@@ -197,19 +197,19 @@ outline: deep
 
 如果指定了一个新的文件名，还需要增加一不配置，创建一个config文件
 
-![](assets/2024-11-27_215627.jpg)
+![](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109267_0.jpg)
 
 意思：当我们访问GitHub时，指定使用SSH下的test密钥
 
 使用`vi config` 写入即可
 
-![](assets/2024-11-27_220032.jpg)
+![](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109269_0.jpg)
 
 推送：git push
 
 拉取：git pull
 
- ![](assets/2024-11-27_220237.jpg)
+ ![](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109271_0.jpg)
 
 #### 关联本地仓库和远程仓库
 
@@ -229,7 +229,7 @@ outline: deep
 
 `code .`使用vscode打开当前目录
 
-![](assets/2024-11-28_214525.jpg)
+![](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109272_0.jpg)
 
 创建新分支`git branch <name>`
 
@@ -263,7 +263,7 @@ outline: deep
 
 在提交之前中断合并`git merge --abort`(当不想继续执行操作时可以使用命令来中止合并操作)
 
-![](assets/2024-11-28_221940.jpg)
+![](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109275_0.jpg)
 
 恢复指定时间点的状态`git checkout -b  <dev>  <id>`
 
@@ -291,4 +291,4 @@ Rebase
 
 GitFlow模型
 
-![](assets/2024-11-28_224107.jpg)
+![](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109277_0.jpg)

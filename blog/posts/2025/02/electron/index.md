@@ -28,11 +28,11 @@ description: Electron的核心在于主进程和渲染进程以及如何通信�
 
 ###  技术架构
 
-![image-20250218201749108](./assets/image-20250218201749108.png)
+![image-20250218201749108](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109376_0.png)
 
 ### 进程模型
 
-![image-20250218201815891](./assets/image-20250218201815891.png)
+![image-20250218201815891](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109378_0.png)
 
 其核心就是围绕**主进程**，就是一个node环境，用于管理**渲染进程**（窗口），渲染进程是浏览器环境了，即可使用前端三剑客了。
 
@@ -148,11 +148,11 @@ win.loadFile('./pages/index.html')
 
 ### 细节
 
-![image-20250218210921778](./assets/image-20250218210921778.png)
+![image-20250218210921778](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109382_0.png)
 
 这个问题不影响开发，忽略即可
 
-![image-20250218211029935](./assets/image-20250218211029935.png)
+![image-20250218211029935](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109384_0.png)
 
 CSP配置，内容安全警告，网页能加载什么，不能加载什么
 
@@ -273,7 +273,7 @@ npm i nodemon -D
 
 下图是 Chrome 浏览器的程序架构，图来自于[Chrome 漫画](https://www.google.com/googlebooks/chrome/)。
 
-![image-20250218213901857](./assets/image-20250218213901857.png)
+![image-20250218213901857](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109388_0.png)
 
 Electron 应用的结构与上图非常相似，在 Electron 中主要控制两类进程：**主进程**、**渲染器进程**。
 
@@ -383,7 +383,7 @@ btn.addEventListener('click',()=>{
 
 整体文件结构
 
-![image-20250218220302560](./assets/image-20250218220302560.png)
+![image-20250218220302560](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109392_0.png)
 
 ## 进程通信（IPC）
 

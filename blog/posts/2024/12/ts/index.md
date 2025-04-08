@@ -514,7 +514,7 @@ walk('left')
 walk('right')
 ```
 
-![image-20250123085730088](./assets/Snipaste_2025-01-02_21-58-37.png)
+![image-20250123085730088](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109212_0.png)
 
 #### 数字枚举 {#ReverseMapping}
 

@@ -70,7 +70,7 @@ npm run docs:dev
 
 在项目根目录创建一个`public`文件夹用于存放静态图片
 
-![image-20250309171131160](./assets/image-20250309171131160.png)
+![image-20250309171131160](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109618_0.png)
 
 其中放一张图片用于作为博客图标
 
@@ -116,7 +116,7 @@ export default defineConfig({
 
 配置完成即可看到**顶部图标**，以及**左上角标题旁**边的图标
 
-![image-20250309173028204](./assets/image-20250309173028204.png)
+![image-20250309173028204](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109622_0.png)
 
 ### 主页
 
@@ -154,7 +154,7 @@ features:
 ---
 ```
 
-![image-20250309173724342](./assets/image-20250309173724342.png)
+![image-20250309173724342](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109624_0.png)
 
 其他信息按需配置即可
 
@@ -404,7 +404,7 @@ import './Customize.css'
 
 可以在浏览器中右键**检查**，或者直接按下`F12`或者`Ctrl + Shift + i`，
 
-![image-20250309182346489](./assets/image-20250309182346489.png)
+![image-20250309182346489](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109630_0.png)
 
 想要修改哪个元素获取对应的样式名即可
 
