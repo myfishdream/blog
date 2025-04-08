@@ -7,10 +7,10 @@ categories:
  - 笔记
 tags:
  - JavaScript
-description: JavaScript
+description: 深入探讨JavaScript模块化开发，包括CommonJS、AMD、CMD和ES6模块化等规范，以及它们的使用方法和最佳实践
 ---
 
-# JavaScrip模块化
+# JavaScript模块化
 
 **模块化规范**
 
@@ -21,7 +21,7 @@ description: JavaScript
 
 拆分出来**每个文件就是一个模块**，模块中的数据都是**私有的**，模块之间互相**隔离**。
 
-同时也能通过一些手段，可以把模块内的指定数据“**交出去**”，供其他模块使用。
+同时也能通过一些手段，可以把模块内的指定数据"**交出去**"，供其他模块使用。
 
 **模块化的作用：**
 
@@ -304,8 +304,9 @@ export default {name,motto,getTel}
 
 ```js
 // 导出name ———— 分别导出
-export const name = {str:'尚硅谷'}
-const slogan = '让天下没有难学的技术！'
+export const name = {str:'尚硅谷'} 
+//分别导出
+export const slogan = '让天下没有难学的技术！' 
 
 function getTel (){
   return '010-56253825'
