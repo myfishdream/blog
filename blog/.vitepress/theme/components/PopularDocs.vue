@@ -7,7 +7,7 @@
                 <span>热门文章</span>
             </div>
             <div class="hot-list">
-                <div v-for="(article, index) in hotArticles" :key="index" class="hot-item" @click="navigateTo(article.url)">
+                <div v-if="hotArticles.length > 0" v-for="(article, index) in hotArticles" :key="index" class="hot-item" @click="navigateTo(article.url)">
                     <div class="rank" :class="{'top3': index < 3}">{{ index + 1 }}</div>
                     <div class="content">
                         <div class="article-title">{{ article.title }}</div>
@@ -15,6 +15,9 @@
                             <span class="date">{{ article.date }}</span>
                         </div>
                     </div>
+                </div>
+                <div v-else class="no-data">
+                    <span>暂无热门文章</span>
                 </div>
             </div>
         </div>
@@ -28,41 +31,41 @@ const router = useRouter()
 
 // 手动设置热门文章列表
 const hotArticles = [
-    {
-        title: 'WebSocket',
-        url: '/2025/03/WebSocket/',
-        date: '2025-03-23'
-    },
-    {
-        title: '正则表达式',
-        url: '/2025/03/Regular/',
-        date: '2025-03-11'
-    },
-    {
-        title: 'Cursor基础使用',
-        url: '/2025/03/Cursor/',
-        date: '2025-02-02'
-    },
-    {
-        title: 'Demo1',
-        url: '/2025/04/Demo1/',
-        date: '2025-04-02'
-    },
-    {
-        title: 'Demo2',
-        url: '/demo2',
-        date: '2025-04-02'
-    },
-    {
-        title: 'Demo3',
-        url: '/demo3',
-        date: '2025-04-02'
-    },
-    {
-        title: 'Demo4',
-        url: '/demo4',
-        date: '2025-04-02'
-    }
+    // {
+    //     title: 'WebSocket',
+    //     url: '/2025/03/WebSocket/',
+    //     date: '2025-03-23'
+    // },
+    // {
+    //     title: '正则表达式',
+    //     url: '/2025/03/Regular/',
+    //     date: '2025-03-11'
+    // },
+    // {
+    //     title: 'Cursor基础使用',
+    //     url: '/2025/03/Cursor/',
+    //     date: '2025-02-02'
+    // },
+    // {
+    //     title: 'Demo1',
+    //     url: '/2025/04/Demo1/',
+    //     date: '2025-04-02'
+    // },
+    // {
+    //     title: 'Demo2',
+    //     url: '/demo2',
+    //     date: '2025-04-02'
+    // },
+    // {
+    //     title: 'Demo3',
+    //     url: '/demo3',
+    //     date: '2025-04-02'
+    // },
+    // {
+    //     title: 'Demo4',
+    //     url: '/demo4',
+    //     date: '2025-04-02'
+    // }
 ]
 
 // 页面跳转
@@ -188,5 +191,10 @@ const navigateTo = (url) => {
     .article-meta {
         width: 100%;
     }
+}
+
+.no-data {
+    text-align: center;
+    color: var(--vp-c-text-2);
 }
 </style>

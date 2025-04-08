@@ -37,7 +37,7 @@
         <template #nav-bar-title-after>
             <!-- 在标题后添加 -->
              <!-- 读取config.mjs -->
-           <span class="VPBadge warning strong mini">{{theme.version }}</span>
+           <span v-if="theme.showVersion" class="VPBadge" :class="theme.versionStyle">{{theme.version }}</span>
         </template>
         <template #sidebar-nav-before>
             <PageNavi />

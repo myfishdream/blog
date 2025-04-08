@@ -26,6 +26,8 @@ export default defineConfig({
     ignoreDeadLinks: true,
     themeConfig: {
         version: 'v1.0.4',
+        showVersion: false,  // 是否显示版本号
+        versionStyle: 'tip', // 版本号样式
         yuucodeurl: 'https://blog.yumeng.icu/', //这里是内页ArticleLink组件用到的跳转第三方网址(备用下载地址)
         sidebar: [{}], //这里如果删掉，左侧栏的内容全部不显示。页面布局会变成通栏
         nav: [
@@ -108,10 +110,10 @@ export default defineConfig({
                 "url": "https://www.kumeiwp.com/wj/178810/2023/12/12/94ddfee636c78380b9c50d0ce6e07bd5.mp3",
                 "pic": "",
                 "lrc": ""
-            },{
+            }, {
                 "id": 2,
-                title:'海阔天空',
-                author:'Beyond',
+                title: '海阔天空',
+                author: 'Beyond',
                 url: 'https://www.kumeiwp.com/wj/213316/2024/05/12/fcf1fe6959ff836ccb1fe8b7c9ec5dcf.mp3',
                 pic: '',
                 lrc: ''
