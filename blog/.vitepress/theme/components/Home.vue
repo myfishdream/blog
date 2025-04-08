@@ -1,4 +1,3 @@
-
 <template>
   <!-- 首页。处理不同路由显示不同文章数据，包括 tag\category\year\month\pagesnum -->
   <PageSlider></PageSlider>
@@ -12,7 +11,7 @@
 import { computed, ref, onMounted, nextTick, watch } from 'vue'
 import { useBrowserLocation, useStorage } from '@vueuse/core'
 import { useData,useRouter } from 'vitepress'
-import { data as themeposts } from '../posts.data'
+import { data } from '../posts.data'
 import { formatSearch } from '../../theme/functions'
 import { toast } from 'vue3-toastify';  
 import Welcome from "../../theme/components/Welcome.vue";
@@ -33,23 +32,23 @@ const bread = ref('全部内容')
 const breadrxt = computed(() => (bread.value))
 const posts = computed(() => {
   if (selectCategory.value) {
-    return themeposts.filter((article) =>
+    return data.filter((article) =>
       article?.frontmatter?.categories && article?.frontmatter?.categories.includes(selectCategory.value)
     )
   } else if (selectTag.value) {
-    return themeposts.filter((article) =>
+    return data.filter((article) =>
       article?.frontmatter?.tags && article?.frontmatter?.tags.includes(selectTag.value)
     )
   } else if (selectYear.value && selectMonth.value) {
-    return themeposts.filter((article) =>
+    return data.filter((article) =>
       article?.frontmatter?.date && new Date(article?.frontmatter?.date).getFullYear() + '' == selectYear.value && new Date(article?.frontmatter?.date).getMonth() + 1 + '月' == selectMonth.value
     )
   } else if (selectYear.value) {
-    return themeposts.filter((article) =>
+    return data.filter((article) =>
       article?.frontmatter?.date && new Date(article?.frontmatter?.date).getFullYear() + '' == selectYear.value
     )
   } else {
-    return themeposts
+    return data
   }
 })
 const per_page = ref(23);
