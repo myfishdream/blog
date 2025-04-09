@@ -10,9 +10,8 @@
         </template>
         <template #layout-top>
             <ClientOnly><!-- 在布局下方添加 -->
-
                 <div class="snow" v-if="theme.website?.showSnow && isDark">
-                    <div v-for="index in 80" :key="index" class="dot"></div>
+                    <!-- <div v-for="index in 80" :key="index" class="dot">d</div> -->
                 </div>
                 <Lantern /> <!-- 灯笼组件 -->
             </ClientOnly>
@@ -177,43 +176,6 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }) => {
   /* transform: none !important; */
 }
 /* ------------------------------------------ */
-.snowbanner {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 10;
-    pointer-events: none;
-
-    .img {
-        width: 88%;
-        height: fit-content;
-        position: absolute;
-        bottom: 0px;
-        left: 50%;
-        transform: translate(-50%);
-    }
-}
-
-.snow {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 99999;
-    pointer-events: none;
-
-    .img {
-        width: 88%;
-        height: fit-content;
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translate(-50%);
-    }
-}
 
 .page404 {
     width: 224px;

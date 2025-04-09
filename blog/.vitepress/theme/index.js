@@ -35,7 +35,6 @@ import Countdown from './components/Countdown.vue'
 // import demo from './components/demo.vue'
 
 import './components/style.css'
-import './components/snow.css'  //一个 css3雪花特效，用于暗黑模式下显示雪花
 
 const pinia = createPinia()
 
