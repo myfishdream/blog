@@ -147,7 +147,7 @@
   /* 自定义颜色 */
   :root{
     /* 卡片小人的肤色 */
-    --vp-c-card-bg: #f4cbb0;
+    --vp-c-card-bg: rgba(221, 221, 221);
     /* 小人边框颜色 */
     --vp-c-card-border: var(--vp-c-bg);
     /* 耳机把柄颜色 */

@@ -12,7 +12,7 @@
       <div class="authorarea" :class="{ happy: !isPause }">
         <div class="author">
           <div class="avator" :class="{ pay: pay }" v-tooltip="talkword">
-            <div class="hat" v-if="isPause">
+            <div class="hat" v-if="isPause" v-show="false">
               <svg height="600" node-id="1" sillyvg="true" template-height="600" template-width="600" version="1.1"
                 viewBox="0 0 600 600" width="600" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -72,20 +72,24 @@
                 <g node-id="80">
                   <path
                     d="M 185.20 291.60 L 183.80 291.40 L 182.90 291.00 L 182.40 290.30 L 182.20 289.20 L 188.10 269.10 L 181.10 235.50 L 181.30 234.00 L 182.00 232.70 L 183.10 231.90 L 184.70 231.60 L 199.50 231.70 L 200.90 231.90 L 202.00 232.60 L 202.80 233.60 L 203.40 235.20 L 204.90 245.40 L 212.80 235.30 L 216.10 232.50 L 219.10 231.70 L 232.90 231.80 L 234.50 232.10 L 235.30 232.60 L 235.70 233.40 L 235.00 235.80 L 207.40 268.70 L 201.50 287.70 L 200.70 289.50 L 199.50 290.70 L 198.10 291.50 L 196.30 291.70 L 185.20 291.60 Z"
-                    fill="#0b3388" fill-rule="nonzero" group-id="2" node-id="71" stroke="none" target-height="60.100006"
-                    target-width="54.59999" target-x="181.1" target-y="231.6" />
+                    fill="#0b3388" fill-rule="nonzero" group-id="2" hidden="true" node-id="71" stroke="none"
+                    target-height="60.100006" target-width="54.59999" target-x="181.1" target-y="231.6"
+                    visibility="hidden" />
                   <path
                     d="M 268.30 286.60 L 267.50 288.30 L 266.60 289.60 L 265.40 290.50 L 264.00 291.00 L 262.30 291.20 L 229.50 291.20 L 226.50 291.00 L 224.30 290.30 L 222.70 289.40 L 221.50 288.20 L 220.80 286.70 L 220.50 284.70 L 220.60 282.20 L 221.40 278.90 L 232.40 243.90 L 233.70 240.50 L 235.40 237.80 L 237.30 235.70 L 239.60 234.00 L 242.30 232.80 L 245.40 232.00 L 249.10 231.70 L 281.80 231.70 L 283.20 231.90 L 284.00 232.30 L 284.50 233.00 L 284.60 234.00 L 284.30 235.50 L 281.60 244.20 L 280.90 245.70 L 279.90 246.70 L 278.70 247.30 L 277.10 247.50 L 253.90 247.50 L 251.90 247.70 L 250.30 248.40 L 248.90 249.60 L 247.60 251.40 L 246.60 253.80 L 273.70 253.80 L 275.00 254.00 L 275.80 254.40 L 276.20 255.10 L 276.30 256.20 L 276.00 257.80 L 273.40 266.10 L 272.70 267.70 L 271.70 268.80 L 270.40 269.40 L 268.70 269.60 L 241.60 269.60 L 241.10 271.90 L 241.30 273.40 L 241.90 274.40 L 243.00 275.10 L 244.80 275.30 L 268.00 275.30 L 269.40 275.50 L 270.30 275.90 L 270.80 276.60 L 271.00 277.60 L 270.70 279.10 L 268.30 286.60 Z"
-                    fill="#0b3388" fill-rule="nonzero" group-id="2" node-id="73" stroke="none" target-height="59.500015"
-                    target-width="64.100006" target-x="220.5" target-y="231.7" />
+                    fill="#0b3388" fill-rule="nonzero" group-id="2" hidden="true" node-id="73" stroke="none"
+                    target-height="59.500015" target-width="64.100006" target-x="220.5" target-y="231.7"
+                    visibility="hidden" />
                   <path
                     d="M 325.90 291.20 L 316.30 291.20 L 314.70 291.00 L 313.80 290.30 L 313.30 289.20 L 313.20 287.50 L 314.00 277.00 L 298.40 277.00 L 291.70 289.20 L 290.60 290.30 L 289.20 291.00 L 278.00 291.20 L 276.50 291.00 L 275.70 290.40 L 275.40 289.40 L 275.70 287.80 L 278.20 283.00 L 302.30 237.60 L 303.80 235.40 L 305.40 233.80 L 307.10 232.70 L 308.90 232.10 L 329.90 231.90 L 332.20 232.30 L 333.70 233.00 L 334.60 233.90 L 335.00 235.20 L 330.90 287.50 L 330.20 289.20 L 329.10 290.30 L 327.70 291.00 L 325.90 291.20 Z M 316.50 261.00 L 317.90 249.70 L 317.80 248.60 L 317.40 248.10 L 316.60 247.90 L 314.20 247.90 L 312.60 248.60 L 306.00 261.00 L 316.50 261.00 Z"
-                    fill="#0b3388" fill-rule="nonzero" group-id="2" node-id="75" stroke="none" target-height="59.30002"
-                    target-width="59.600006" target-x="275.4" target-y="231.9" />
+                    fill="#0b3388" fill-rule="nonzero" group-id="2" hidden="true" node-id="75" stroke="none"
+                    target-height="59.30002" target-width="59.600006" target-x="275.4" target-y="231.9"
+                    visibility="hidden" />
                   <path
                     d="M 390.90 286.30 L 390.10 288.10 L 389.10 289.50 L 387.80 290.40 L 386.10 291.00 L 376.30 291.20 L 374.80 291.00 L 373.90 290.40 L 373.40 289.50 L 373.20 288.00 L 373.70 285.70 L 378.80 269.30 L 363.70 269.30 L 358.40 286.30 L 357.60 288.10 L 356.70 289.40 L 355.50 290.40 L 354.10 290.90 L 352.50 291.10 L 342.40 290.90 L 341.50 290.30 L 340.90 289.50 L 340.70 288.20 L 341.10 286.20 L 356.40 237.40 L 357.30 235.20 L 358.40 233.70 L 359.60 232.70 L 360.90 232.10 L 362.40 231.90 L 370.60 231.90 L 372.30 232.10 L 373.40 232.70 L 374.00 233.70 L 374.20 235.20 L 373.70 237.40 L 369.10 252.10 L 384.20 252.10 L 388.90 237.20 L 389.80 235.10 L 390.80 233.70 L 391.90 232.70 L 393.30 232.10 L 403.10 231.90 L 404.70 232.10 L 405.80 232.70 L 406.40 233.70 L 406.50 235.20 L 406.10 237.40 L 390.90 286.30 Z"
-                    fill="#0b3388" fill-rule="nonzero" group-id="2" node-id="77" stroke="none" target-height="59.30002"
-                    target-width="65.79999" target-x="340.7" target-y="231.9" />
+                    fill="#0b3388" fill-rule="nonzero" group-id="2" hidden="true" node-id="77" stroke="none"
+                    target-height="59.30002" target-width="65.79999" target-x="340.7" target-y="231.9"
+                    visibility="hidden" />
                 </g>
               </svg>
             </div>
@@ -130,7 +134,7 @@
           </div>
           <div class="nickname"><a :href="theme?.article?.cc?.authorLink" target="_blank">博主：{{
             theme?.article?.cc?.author
-              }}</a></div>
+          }}</a></div>
         </div>
         <div class="social">
           <ul class="ul">
@@ -244,10 +248,10 @@ const musicMounted = () => {
 
 onMounted(() => {
   // theme.website?.cardMusic   判断是否需要初始化音乐播放器
-    if (theme.value.website.cardMusic) {
-      // 初始化播放器
-      musicMounted()
-    }
+  if (theme.value.website.cardMusic) {
+    // 初始化播放器
+    musicMounted()
+  }
 })
 
 const props = defineProps({

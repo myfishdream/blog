@@ -3,7 +3,7 @@
   <div class="articlelist" :class="{ grid: listview === 'grid', list: listview === 'list' }">
     <div class="acontent">
       <div class="main">
-        <div class="cover">
+        <div class="cover" v-if="theme.cover">
           <a :href="withBase(article.relativePath)" class="a">
             <template v-if="article.frontmatter.cover">
               <img class="img bgimg" :src="article.frontmatter.cover" />
@@ -16,7 +16,7 @@
                 :width="800"
                 :height="400"
               /> -->
-              <img class="img bgimg" src="/cover/default1.png" />
+              <img class="img bgimg" src="/cover/default.png" />
             </template>
           </a>
         </div>
@@ -53,6 +53,10 @@ const props = defineProps({
     required: true
   }
 });
+
+const { theme } = useData();
+
+
 
 const listview = useStorage('listview', 'grid')
 </script>
