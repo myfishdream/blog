@@ -8,20 +8,21 @@ categories:
 tags:
  - JavaScript
 description: 深入探讨JavaScript模块化开发，包括CommonJS、AMD、CMD和ES6模块化等规范，以及它们的使用方法和最佳实践
+outline: [2,3]
 ---
 
-# JavaScript模块化
+# JavaScrip模块化
 
 **模块化规范**
 
 **模块化的定义：**
->[尚硅谷笔记](https://www.yuque.com/tianyu-coder/openshare/electron)
+
 
 将程序文件依据规则<span style="color:#CC0000; font-weight:bold;">拆分</span>成多个文件，这种编码方式就是<span style="font-weight:bold; color:#CC0000;">模块化</span>
 
 拆分出来**每个文件就是一个模块**，模块中的数据都是**私有的**，模块之间互相**隔离**。
 
-同时也能通过一些手段，可以把模块内的指定数据"**交出去**"，供其他模块使用。
+同时也能通过一些手段，可以把模块内的指定数据“**交出去**”，供其他模块使用。
 
 **模块化的作用：**
 
@@ -45,8 +46,7 @@ description: 深入探讨JavaScript模块化开发，包括CommonJS、AMD、CMD�
 - **导出（暴露）：**模块公开其内部的一部分（如变量、函数等），使这些内容可以被其他模块使用。  
 - **导入（引入）：**模块引入和使用其他模块导出的内容，以重用代码和功能。  
 
-![image-20250217202039964](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109156_0.png)
-
+![](https://cdn.jsdelivr.net/gh/fish81/picx-images-hosting@master/20250408/image.b931phlq9.webp)
 
 
 ## **CommonJS 规范**
@@ -116,7 +116,8 @@ const student = require('./student')
 >
 > 每个模块内部的：`this`、`exports`、`modules.exports`在初始时，都指向**<span style="color:#CC0000;">同一个</span>**空对象，该空对象就是当前模块导出的数据，如下图：
 >
-> ![image-20250217202918792](https://raw.githubusercontent.com/fish81/typora-uploads-images/main/image/1744109165_0.png)
+> ![image](https://cdn.jsdelivr.net/gh/fish81/picx-images-hosting@master/20250408/image.92qbeikcca.webp)
+>
 >
 > 无论如何修改导出对象，最终导出的都是`module.exports`的值。
 >
@@ -304,9 +305,8 @@ export default {name,motto,getTel}
 
 ```js
 // 导出name ———— 分别导出
-export const name = {str:'尚硅谷'} 
-//分别导出
-export const slogan = '让天下没有难学的技术！' 
+export const name = {str:'尚硅谷'}
+const slogan = '让天下没有难学的技术！'
 
 function getTel (){
   return '010-56253825'
@@ -539,3 +539,5 @@ console.log(sum) //3
 ...
 
 ## CMD
+
+...
