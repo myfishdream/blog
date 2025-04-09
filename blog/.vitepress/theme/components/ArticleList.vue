@@ -56,9 +56,7 @@ const props = defineProps({
 
 const { theme } = useData();
 
-
-
-const listview = useStorage('listview', 'grid')
+const listview = useStorage('listview', 'list')
 </script>
 
 <style scoped>
